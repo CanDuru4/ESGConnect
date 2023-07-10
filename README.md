@@ -6,7 +6,15 @@
 <p align="center">
   <a href="https://canduru.net">
     <img src="https://user-images.githubusercontent.com/73294429/186248765-a5b646f6-77fe-4bea-9638-50bb746c01f2.png" alt="Logo" width="221" height="90">
-    <img src="https://user-images.githubusercontent.com/73294429/186247733-fef260b6-0d34-4123-a54e-86eb9a8217fa.png" alt="Logo" width="221" height="90">
   </a>
 </p>
 
+## Meta
+
+Can Duru – canduru2004@gmail.com, can@canduru.net
+
+
+[https://github.com/CanDuru4](https://github.com/CanDuru4)
+
+[swift-image]:https://img.shields.io/badge/swift-5.0-orange.svg
+[swift-url]: https://swift.org/
