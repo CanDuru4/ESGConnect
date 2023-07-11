@@ -5,13 +5,18 @@
 <br />
 <p align="center">
   <a href="https://canduru.net">
-    <img src="https://user-images.githubusercontent.com/73294429/186248765-a5b646f6-77fe-4bea-9638-50bb746c01f2.png" alt="Logo" width="221" height="90">
+    <img src="https://github.com/CanDuru4/ESGConnect/assets/73294429/4d710f3d-b029-4ea0-ae6a-db5245629689" alt="Logo" width="221" height="90">
   </a>
 </p>
+<p>
+
+## Status
+
+This application is currently in development stage.
 
 ## Meta
 
-Can Duru – canduru2004@gmail.com, can@canduru.net
+Can Duru – canduru2004@gmail.com, support@canduru.net
 
 
 [https://github.com/CanDuru4](https://github.com/CanDuru4)
