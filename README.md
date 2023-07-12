@@ -5,14 +5,13 @@
 <br />
 <p align="center">
   <a href="https://canduru.net">
-    <img src="https://github.com/CanDuru4/ESGConnect/assets/73294429/4d710f3d-b029-4ea0-ae6a-db5245629689" alt="Logo" width="221" height="90">
+    <img src="https://i.ibb.co/rHFr92y/Original-resized.png" alt="Logo" width="221" height="90">
   </a>
 </p>
-<p>
 
 ## Status
 
-This application is currently in development stage.
+This application is currently in the development stage.
 
 ## Meta
 
