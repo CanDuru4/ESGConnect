@@ -21,7 +21,7 @@ class TabBarViewController: UITabBarController {
     func setupVCs() {
           viewControllers = [
             createNavController(for: HomeViewController(), title: NSLocalizedString("", comment: ""), image: UIImage(systemName: "house.fill")!.withRenderingMode(.alwaysOriginal).withTintColor(.systemBlue)),
-              createNavController(for: SearchingViewController(), title: NSLocalizedString("", comment: ""), image: UIImage(systemName: "bus.fill")!.withRenderingMode(.alwaysOriginal).withTintColor(.systemBlue)),
+              createNavController(for: SearchingViewController(), title: NSLocalizedString("", comment: ""), image: UIImage(systemName: "magnifyingglass")!.withRenderingMode(.alwaysOriginal).withTintColor(.systemBlue)),
               createNavController(for: ProfileViewController(), title: NSLocalizedString("", comment: ""), image: UIImage(systemName: "person.fill")!.withRenderingMode(.alwaysOriginal).withTintColor(.systemBlue))
           ]
       }
