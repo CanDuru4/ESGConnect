@@ -53,7 +53,7 @@ class SignUpViewController: UIViewController {
         imageView.translatesAutoresizingMaskIntoConstraints = false
 
         //MARK: Name Field Feature
-        nameField.placeholder = "Name"
+        nameField.placeholder = "Name / Company Name"
         nameField.borderStyle = .roundedRect
         nameField.layer.borderColor = CGColor(red: 255/255, green: 191/255, blue: 69/255, alpha: 1)
         nameField.layer.borderWidth = CGFloat(1)

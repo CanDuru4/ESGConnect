@@ -12,6 +12,9 @@
 		1F6C077A2A57FF7A00B4EAFE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6C07792A57FF7A00B4EAFE /* HomeViewController.swift */; };
 		1F6C077F2A57FF7B00B4EAFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F6C077E2A57FF7B00B4EAFE /* Assets.xcassets */; };
 		1F6C07822A57FF7B00B4EAFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F6C07802A57FF7B00B4EAFE /* LaunchScreen.storyboard */; };
+		1FB332C72A65D42B00A046C8 /* PersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB332C62A65D42B00A046C8 /* PersonalInfoViewController.swift */; };
+		1FB332C92A65D5CD00A046C8 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB332C82A65D5CD00A046C8 /* SettingsTableViewCell.swift */; };
+		1FB332CB2A65D60300A046C8 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB332CA2A65D60300A046C8 /* FAQViewController.swift */; };
 		1FEC98AF2A601AF100C5C83B /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEC98AE2A601AF100C5C83B /* LogInViewController.swift */; };
 		1FEC98B12A601AFC00C5C83B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEC98B02A601AFC00C5C83B /* SignUpViewController.swift */; };
 		1FEC98B32A601B0400C5C83B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEC98B22A601B0400C5C83B /* ProfileViewController.swift */; };
@@ -53,6 +56,9 @@
 		1F6C07832A57FF7B00B4EAFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F6C07882A57FF7C00B4EAFE /* ESG ConnectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ESG ConnectTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F6C07922A57FF7C00B4EAFE /* ESG ConnectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ESG ConnectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FB332C62A65D42B00A046C8 /* PersonalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoViewController.swift; sourceTree = "<group>"; };
+		1FB332C82A65D5CD00A046C8 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		1FB332CA2A65D60300A046C8 /* FAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
 		1FEC98AE2A601AF100C5C83B /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		1FEC98B02A601AFC00C5C83B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		1FEC98B22A601B0400C5C83B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +168,9 @@
 			isa = PBXGroup;
 			children = (
 				1FEC98B22A601B0400C5C83B /* ProfileViewController.swift */,
+				1FB332C62A65D42B00A046C8 /* PersonalInfoViewController.swift */,
+				1FB332C82A65D5CD00A046C8 /* SettingsTableViewCell.swift */,
+				1FB332CA2A65D60300A046C8 /* FAQViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -461,11 +470,14 @@
 			files = (
 				1FEC98B72A601BBA00C5C83B /* TabBarViewController.swift in Sources */,
 				1FEC98B32A601B0400C5C83B /* ProfileViewController.swift in Sources */,
+				1FB332C72A65D42B00A046C8 /* PersonalInfoViewController.swift in Sources */,
 				1FEC98AF2A601AF100C5C83B /* LogInViewController.swift in Sources */,
 				1F6C077A2A57FF7A00B4EAFE /* HomeViewController.swift in Sources */,
 				1FEF6A032A6544850066CEC3 /* CredentialsViewController.swift in Sources */,
+				1FB332C92A65D5CD00A046C8 /* SettingsTableViewCell.swift in Sources */,
 				1F6C07762A57FF7A00B4EAFE /* AppDelegate.swift in Sources */,
 				1FEC98B52A601B1200C5C83B /* SearchingViewController.swift in Sources */,
+				1FB332CB2A65D60300A046C8 /* FAQViewController.swift in Sources */,
 				1F6C07782A57FF7A00B4EAFE /* SceneDelegate.swift in Sources */,
 				1FEC98B12A601AFC00C5C83B /* SignUpViewController.swift in Sources */,
 			);
