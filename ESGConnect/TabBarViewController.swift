@@ -12,17 +12,18 @@ class TabBarViewController: UITabBarController {
 //MARK: Load
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
-        tabBar.backgroundColor = .white
+        tabBar.backgroundColor = UIColor(named: "AppBlueDarker")
+        tabBar.unselectedItemTintColor = .black
+        tabBar.tintColor = UIColor(named: "AppYellow")
         setupVCs()
     }
     
     //MARK: Create ViewControllers
     func setupVCs() {
           viewControllers = [
-            createNavController(for: HomeViewController(), title: NSLocalizedString("", comment: ""), image: UIImage(systemName: "house.fill")!.withRenderingMode(.alwaysOriginal).withTintColor(.systemBlue)),
-              createNavController(for: SearchingViewController(), title: NSLocalizedString("", comment: ""), image: UIImage(systemName: "magnifyingglass")!.withRenderingMode(.alwaysOriginal).withTintColor(.systemBlue)),
-              createNavController(for: ProfileViewController(), title: NSLocalizedString("", comment: ""), image: UIImage(systemName: "person.fill")!.withRenderingMode(.alwaysOriginal).withTintColor(.systemBlue))
+            createNavController(for: HomeViewController(), title: NSLocalizedString("", comment: ""), image: UIImage(systemName: "house.fill")!.withRenderingMode(.alwaysOriginal).withTintColor(.black)),
+              createNavController(for: SearchingViewController(), title: NSLocalizedString("", comment: ""), image: UIImage(systemName: "magnifyingglass")!.withRenderingMode(.alwaysOriginal).withTintColor(.black)),
+              createNavController(for: ProfileViewController(), title: NSLocalizedString("", comment: ""), image: UIImage(systemName: "person.fill")!.withRenderingMode(.alwaysOriginal).withTintColor(.black))
           ]
       }
     
