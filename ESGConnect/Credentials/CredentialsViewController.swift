@@ -28,6 +28,7 @@ class CredentialsViewController: UIViewController {
                self.navigationController?.pushViewController(TabBarViewController(), animated: true)
                self.navigationController?.setNavigationBarHidden(true, animated: true)
            } else {
+               print("loggedout")
            }
         }
         self.setLabels()
