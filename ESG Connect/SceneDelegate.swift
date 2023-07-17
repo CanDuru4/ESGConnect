@@ -19,8 +19,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         //MARK: Create Navigation Controller
         let nav = UINavigationController()
-        nav.viewControllers = [TabBarViewController()]
-        nav.setNavigationBarHidden(true, animated: true)
+        nav.viewControllers = [CredentialsViewController()]
+        nav.setNavigationBarHidden(false, animated: true)
+        
+        //MARK: Create Navigation Controller
+        let nav2 = UINavigationController()
+        nav2.viewControllers = [TabBarViewController()]
+        nav2.setNavigationBarHidden(false, animated: true)
         
         //MARK: Set App Start
         self.window?.rootViewController = nav
@@ -55,7 +60,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
-
-
+    
+    
 }
 
