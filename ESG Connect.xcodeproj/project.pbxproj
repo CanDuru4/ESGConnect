@@ -60,13 +60,13 @@
 		1FEC98B62A601BBA00C5C83B /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		1FEF6A022A6544850066CEC3 /* CredentialsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsViewController.swift; sourceTree = "<group>"; };
 		1FEF6A042A654F710066CEC3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		242CAF272BFCB5835BE95A74 /* Pods-ESG ConnectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESG ConnectTests.release.xcconfig"; path = "Target Support Files/Pods-ESG ConnectTests/Pods-ESG ConnectTests.release.xcconfig"; sourceTree = "<group>"; };
-		3C1DB5E77D594A6034916D25 /* Pods-ESG Connect.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESG Connect.release.xcconfig"; path = "Target Support Files/Pods-ESG Connect/Pods-ESG Connect.release.xcconfig"; sourceTree = "<group>"; };
-		4107BC2C7F60FE463CDFAC66 /* Pods-ESG Connect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESG Connect.debug.xcconfig"; path = "Target Support Files/Pods-ESG Connect/Pods-ESG Connect.debug.xcconfig"; sourceTree = "<group>"; };
-		83149C73871681FE9F25231D /* Pods-ESG Connect-ESG ConnectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESG Connect-ESG ConnectUITests.release.xcconfig"; path = "Target Support Files/Pods-ESG Connect-ESG ConnectUITests/Pods-ESG Connect-ESG ConnectUITests.release.xcconfig"; sourceTree = "<group>"; };
+		391BE7B7A253EDDD6ABC0E01 /* Pods-ESG Connect.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESG Connect.release.xcconfig"; path = "Target Support Files/Pods-ESG Connect/Pods-ESG Connect.release.xcconfig"; sourceTree = "<group>"; };
+		479D54E376C3686D4A6228F8 /* Pods-ESG Connect-ESG ConnectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESG Connect-ESG ConnectUITests.release.xcconfig"; path = "Target Support Files/Pods-ESG Connect-ESG ConnectUITests/Pods-ESG Connect-ESG ConnectUITests.release.xcconfig"; sourceTree = "<group>"; };
+		543F79F2DFB904D3620A47EE /* Pods-ESG ConnectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESG ConnectTests.release.xcconfig"; path = "Target Support Files/Pods-ESG ConnectTests/Pods-ESG ConnectTests.release.xcconfig"; sourceTree = "<group>"; };
+		619D071D2BA46338BEB5EF35 /* Pods-ESG ConnectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESG ConnectTests.debug.xcconfig"; path = "Target Support Files/Pods-ESG ConnectTests/Pods-ESG ConnectTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8898B6EFD67EE0E0A80C7E59 /* Pods-ESG Connect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESG Connect.debug.xcconfig"; path = "Target Support Files/Pods-ESG Connect/Pods-ESG Connect.debug.xcconfig"; sourceTree = "<group>"; };
 		92DA10686C5608D63791C0E7 /* Pods_ESG_ConnectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ESG_ConnectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C51D2C03166F95633FD946B3 /* Pods-ESG ConnectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESG ConnectTests.debug.xcconfig"; path = "Target Support Files/Pods-ESG ConnectTests/Pods-ESG ConnectTests.debug.xcconfig"; sourceTree = "<group>"; };
-		CFDAE401C59ACB5D956C1693 /* Pods-ESG Connect-ESG ConnectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESG Connect-ESG ConnectUITests.debug.xcconfig"; path = "Target Support Files/Pods-ESG Connect-ESG ConnectUITests/Pods-ESG Connect-ESG ConnectUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C018E99237A18930C4A50CE8 /* Pods-ESG Connect-ESG ConnectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESG Connect-ESG ConnectUITests.debug.xcconfig"; path = "Target Support Files/Pods-ESG Connect-ESG ConnectUITests/Pods-ESG Connect-ESG ConnectUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F44DB6E09A4B53FCFAB8531B /* Pods_ESG_Connect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ESG_Connect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF465802BEEE4CD78E360D57 /* Pods_ESG_Connect_ESG_ConnectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ESG_Connect_ESG_ConnectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -104,10 +104,10 @@
 			children = (
 				1F097B1F2A5C9C22005FBA32 /* CHANGELOG.md */,
 				1F097B1E2A5C9C15005FBA32 /* README.md */,
-				1F6C07742A57FF7A00B4EAFE /* ESG Connect */,
+				1F6C07742A57FF7A00B4EAFE /* ESGConnect */,
 				1F6C07732A57FF7A00B4EAFE /* Products */,
-				5267D3CF5270356B2E89ABF1 /* Pods */,
 				9C6D412F832E35C7CEE6598F /* Frameworks */,
+				E2C210AD4FCEE95AAC5DE259 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,7 +121,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1F6C07742A57FF7A00B4EAFE /* ESG Connect */ = {
+		1F6C07742A57FF7A00B4EAFE /* ESGConnect */ = {
 			isa = PBXGroup;
 			children = (
 				1FEC98BE2A601C2B00C5C83B /* Translation */,
@@ -139,7 +139,7 @@
 				1F6C07832A57FF7B00B4EAFE /* Info.plist */,
 				1FEF6A042A654F710066CEC3 /* GoogleService-Info.plist */,
 			);
-			path = "ESG Connect";
+			path = ESGConnect;
 			sourceTree = "<group>";
 		};
 		1FEC98B82A601BC200C5C83B /* LogIn */ = {
@@ -197,20 +197,6 @@
 			path = Credentials;
 			sourceTree = "<group>";
 		};
-		5267D3CF5270356B2E89ABF1 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				4107BC2C7F60FE463CDFAC66 /* Pods-ESG Connect.debug.xcconfig */,
-				3C1DB5E77D594A6034916D25 /* Pods-ESG Connect.release.xcconfig */,
-				CFDAE401C59ACB5D956C1693 /* Pods-ESG Connect-ESG ConnectUITests.debug.xcconfig */,
-				83149C73871681FE9F25231D /* Pods-ESG Connect-ESG ConnectUITests.release.xcconfig */,
-				C51D2C03166F95633FD946B3 /* Pods-ESG ConnectTests.debug.xcconfig */,
-				242CAF272BFCB5835BE95A74 /* Pods-ESG ConnectTests.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		9C6D412F832E35C7CEE6598F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +205,19 @@
 				92DA10686C5608D63791C0E7 /* Pods_ESG_ConnectTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E2C210AD4FCEE95AAC5DE259 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8898B6EFD67EE0E0A80C7E59 /* Pods-ESG Connect.debug.xcconfig */,
+				391BE7B7A253EDDD6ABC0E01 /* Pods-ESG Connect.release.xcconfig */,
+				C018E99237A18930C4A50CE8 /* Pods-ESG Connect-ESG ConnectUITests.debug.xcconfig */,
+				479D54E376C3686D4A6228F8 /* Pods-ESG Connect-ESG ConnectUITests.release.xcconfig */,
+				619D071D2BA46338BEB5EF35 /* Pods-ESG ConnectTests.debug.xcconfig */,
+				543F79F2DFB904D3620A47EE /* Pods-ESG ConnectTests.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -629,7 +628,7 @@
 		};
 		1F6C079D2A57FF7C00B4EAFE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4107BC2C7F60FE463CDFAC66 /* Pods-ESG Connect.debug.xcconfig */;
+			baseConfigurationReference = 8898B6EFD67EE0E0A80C7E59 /* Pods-ESG Connect.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -664,7 +663,7 @@
 		};
 		1F6C079E2A57FF7C00B4EAFE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3C1DB5E77D594A6034916D25 /* Pods-ESG Connect.release.xcconfig */;
+			baseConfigurationReference = 391BE7B7A253EDDD6ABC0E01 /* Pods-ESG Connect.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -699,7 +698,7 @@
 		};
 		1F6C07A02A57FF7C00B4EAFE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C51D2C03166F95633FD946B3 /* Pods-ESG ConnectTests.debug.xcconfig */;
+			baseConfigurationReference = 619D071D2BA46338BEB5EF35 /* Pods-ESG ConnectTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -720,7 +719,7 @@
 		};
 		1F6C07A12A57FF7C00B4EAFE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 242CAF272BFCB5835BE95A74 /* Pods-ESG ConnectTests.release.xcconfig */;
+			baseConfigurationReference = 543F79F2DFB904D3620A47EE /* Pods-ESG ConnectTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -741,7 +740,7 @@
 		};
 		1F6C07A32A57FF7C00B4EAFE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CFDAE401C59ACB5D956C1693 /* Pods-ESG Connect-ESG ConnectUITests.debug.xcconfig */;
+			baseConfigurationReference = C018E99237A18930C4A50CE8 /* Pods-ESG Connect-ESG ConnectUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -760,7 +759,7 @@
 		};
 		1F6C07A42A57FF7C00B4EAFE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 83149C73871681FE9F25231D /* Pods-ESG Connect-ESG ConnectUITests.release.xcconfig */;
+			baseConfigurationReference = 479D54E376C3686D4A6228F8 /* Pods-ESG Connect-ESG ConnectUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
