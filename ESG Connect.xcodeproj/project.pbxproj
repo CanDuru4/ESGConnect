@@ -7,11 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F2119E32A6FD008000FEB49 /* The Workable Logo - 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F2119E22A6FD008000FEB49 /* The Workable Logo - 4.png */; };
+		1F2119E52A70032A000FEB49 /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2119E42A70032A000FEB49 /* InfoTableViewCell.swift */; };
 		1F6C07762A57FF7A00B4EAFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6C07752A57FF7A00B4EAFE /* AppDelegate.swift */; };
 		1F6C07782A57FF7A00B4EAFE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6C07772A57FF7A00B4EAFE /* SceneDelegate.swift */; };
-		1F6C077A2A57FF7A00B4EAFE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6C07792A57FF7A00B4EAFE /* ViewController.swift */; };
+		1F6C077A2A57FF7A00B4EAFE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6C07792A57FF7A00B4EAFE /* HomeViewController.swift */; };
 		1F6C077F2A57FF7B00B4EAFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F6C077E2A57FF7B00B4EAFE /* Assets.xcassets */; };
 		1F6C07822A57FF7B00B4EAFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F6C07802A57FF7B00B4EAFE /* LaunchScreen.storyboard */; };
+		1FB332C72A65D42B00A046C8 /* PersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB332C62A65D42B00A046C8 /* PersonalInfoViewController.swift */; };
+		1FB332C92A65D5CD00A046C8 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB332C82A65D5CD00A046C8 /* SettingsTableViewCell.swift */; };
+		1FB332CB2A65D60300A046C8 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB332CA2A65D60300A046C8 /* FAQViewController.swift */; };
+		1FC9ABEF2A7059380066733E /* AppCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC9ABEE2A7059380066733E /* AppCheck.swift */; };
+		1FEC98AF2A601AF100C5C83B /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEC98AE2A601AF100C5C83B /* LogInViewController.swift */; };
+		1FEC98B12A601AFC00C5C83B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEC98B02A601AFC00C5C83B /* SignUpViewController.swift */; };
+		1FEC98B32A601B0400C5C83B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEC98B22A601B0400C5C83B /* ProfileViewController.swift */; };
+		1FEC98B52A601B1200C5C83B /* SubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEC98B42A601B1200C5C83B /* SubscriptionViewController.swift */; };
+		1FEC98B72A601BBA00C5C83B /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEC98B62A601BBA00C5C83B /* TabBarViewController.swift */; };
+		1FEF6A032A6544850066CEC3 /* CredentialsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEF6A022A6544850066CEC3 /* CredentialsViewController.swift */; };
+		1FEF6A052A654F710066CEC3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1FEF6A042A654F710066CEC3 /* GoogleService-Info.plist */; };
+		635D327BBB82F83CC9CD4432 /* Pods_ESG_ConnectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DA10686C5608D63791C0E7 /* Pods_ESG_ConnectTests.framework */; };
+		AA389185A25A8908FF25CECD /* Pods_ESG_Connect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F44DB6E09A4B53FCFAB8531B /* Pods_ESG_Connect.framework */; };
+		EF92CD9FBC5915EE85A6C71A /* Pods_ESG_Connect_ESG_ConnectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF465802BEEE4CD78E360D57 /* Pods_ESG_Connect_ESG_ConnectUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,15 +50,38 @@
 /* Begin PBXFileReference section */
 		1F097B1E2A5C9C15005FBA32 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1F097B1F2A5C9C22005FBA32 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		1F2119E22A6FD008000FEB49 /* The Workable Logo - 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "The Workable Logo - 4.png"; sourceTree = "<group>"; };
+		1F2119E42A70032A000FEB49 /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
+		1F2119E62A704FAB000FEB49 /* ESG Connect.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ESG Connect.entitlements"; sourceTree = "<group>"; };
 		1F6C07722A57FF7A00B4EAFE /* ESG Connect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ESG Connect.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F6C07752A57FF7A00B4EAFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F6C07772A57FF7A00B4EAFE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1F6C07792A57FF7A00B4EAFE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1F6C07792A57FF7A00B4EAFE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1F6C077E2A57FF7B00B4EAFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F6C07812A57FF7B00B4EAFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F6C07832A57FF7B00B4EAFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F6C07882A57FF7C00B4EAFE /* ESG ConnectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ESG ConnectTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F6C07922A57FF7C00B4EAFE /* ESG ConnectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ESG ConnectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FB332C62A65D42B00A046C8 /* PersonalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoViewController.swift; sourceTree = "<group>"; };
+		1FB332C82A65D5CD00A046C8 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		1FB332CA2A65D60300A046C8 /* FAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
+		1FC9ABEE2A7059380066733E /* AppCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCheck.swift; sourceTree = "<group>"; };
+		1FEC98AE2A601AF100C5C83B /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		1FEC98B02A601AFC00C5C83B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		1FEC98B22A601B0400C5C83B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		1FEC98B42A601B1200C5C83B /* SubscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionViewController.swift; sourceTree = "<group>"; };
+		1FEC98B62A601BBA00C5C83B /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		1FEF6A022A6544850066CEC3 /* CredentialsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsViewController.swift; sourceTree = "<group>"; };
+		1FEF6A042A654F710066CEC3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		391BE7B7A253EDDD6ABC0E01 /* Pods-ESG Connect.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESG Connect.release.xcconfig"; path = "Target Support Files/Pods-ESG Connect/Pods-ESG Connect.release.xcconfig"; sourceTree = "<group>"; };
+		479D54E376C3686D4A6228F8 /* Pods-ESG Connect-ESG ConnectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESG Connect-ESG ConnectUITests.release.xcconfig"; path = "Target Support Files/Pods-ESG Connect-ESG ConnectUITests/Pods-ESG Connect-ESG ConnectUITests.release.xcconfig"; sourceTree = "<group>"; };
+		543F79F2DFB904D3620A47EE /* Pods-ESG ConnectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESG ConnectTests.release.xcconfig"; path = "Target Support Files/Pods-ESG ConnectTests/Pods-ESG ConnectTests.release.xcconfig"; sourceTree = "<group>"; };
+		619D071D2BA46338BEB5EF35 /* Pods-ESG ConnectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESG ConnectTests.debug.xcconfig"; path = "Target Support Files/Pods-ESG ConnectTests/Pods-ESG ConnectTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8898B6EFD67EE0E0A80C7E59 /* Pods-ESG Connect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESG Connect.debug.xcconfig"; path = "Target Support Files/Pods-ESG Connect/Pods-ESG Connect.debug.xcconfig"; sourceTree = "<group>"; };
+		92DA10686C5608D63791C0E7 /* Pods_ESG_ConnectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ESG_ConnectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C018E99237A18930C4A50CE8 /* Pods-ESG Connect-ESG ConnectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESG Connect-ESG ConnectUITests.debug.xcconfig"; path = "Target Support Files/Pods-ESG Connect-ESG ConnectUITests/Pods-ESG Connect-ESG ConnectUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F44DB6E09A4B53FCFAB8531B /* Pods_ESG_Connect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ESG_Connect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF465802BEEE4CD78E360D57 /* Pods_ESG_Connect_ESG_ConnectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ESG_Connect_ESG_ConnectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA389185A25A8908FF25CECD /* Pods_ESG_Connect.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				635D327BBB82F83CC9CD4432 /* Pods_ESG_ConnectTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,19 +105,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF92CD9FBC5915EE85A6C71A /* Pods_ESG_Connect_ESG_ConnectUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F2119E12A6FCFE1000FEB49 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				1F2119E22A6FD008000FEB49 /* The Workable Logo - 4.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		1F6C07692A57FF7A00B4EAFE = {
 			isa = PBXGroup;
 			children = (
+				1F2119E62A704FAB000FEB49 /* ESG Connect.entitlements */,
 				1F097B1F2A5C9C22005FBA32 /* CHANGELOG.md */,
 				1F097B1E2A5C9C15005FBA32 /* README.md */,
-				1F6C07742A57FF7A00B4EAFE /* ESG Connect */,
+				1F6C07742A57FF7A00B4EAFE /* ESGConnect */,
 				1F6C07732A57FF7A00B4EAFE /* Products */,
+				9C6D412F832E35C7CEE6598F /* Frameworks */,
+				E2C210AD4FCEE95AAC5DE259 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,17 +143,109 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1F6C07742A57FF7A00B4EAFE /* ESG Connect */ = {
+		1F6C07742A57FF7A00B4EAFE /* ESGConnect */ = {
 			isa = PBXGroup;
 			children = (
+				1F2119E12A6FCFE1000FEB49 /* Images */,
+				1FEC98BE2A601C2B00C5C83B /* Translation */,
+				1FEF69FD2A653E590066CEC3 /* Credentials */,
+				1FEC98B92A601BD300C5C83B /* SignUp */,
+				1FEC98B82A601BC200C5C83B /* LogIn */,
+				1FEC98BD2A601C1700C5C83B /* Home */,
+				1FEC98BB2A601BDF00C5C83B /* Subscription */,
+				1FEC98BA2A601BD900C5C83B /* Profile */,
+				1FC9ABEE2A7059380066733E /* AppCheck.swift */,
 				1F6C07752A57FF7A00B4EAFE /* AppDelegate.swift */,
 				1F6C07772A57FF7A00B4EAFE /* SceneDelegate.swift */,
-				1F6C07792A57FF7A00B4EAFE /* ViewController.swift */,
+				1FEC98B62A601BBA00C5C83B /* TabBarViewController.swift */,
 				1F6C077E2A57FF7B00B4EAFE /* Assets.xcassets */,
 				1F6C07802A57FF7B00B4EAFE /* LaunchScreen.storyboard */,
 				1F6C07832A57FF7B00B4EAFE /* Info.plist */,
+				1FEF6A042A654F710066CEC3 /* GoogleService-Info.plist */,
 			);
-			path = "ESG Connect";
+			path = ESGConnect;
+			sourceTree = "<group>";
+		};
+		1FEC98B82A601BC200C5C83B /* LogIn */ = {
+			isa = PBXGroup;
+			children = (
+				1FEC98AE2A601AF100C5C83B /* LogInViewController.swift */,
+			);
+			path = LogIn;
+			sourceTree = "<group>";
+		};
+		1FEC98B92A601BD300C5C83B /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				1FEC98B02A601AFC00C5C83B /* SignUpViewController.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		1FEC98BA2A601BD900C5C83B /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				1FEC98B22A601B0400C5C83B /* ProfileViewController.swift */,
+				1FB332C62A65D42B00A046C8 /* PersonalInfoViewController.swift */,
+				1FB332C82A65D5CD00A046C8 /* SettingsTableViewCell.swift */,
+				1FB332CA2A65D60300A046C8 /* FAQViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		1FEC98BB2A601BDF00C5C83B /* Subscription */ = {
+			isa = PBXGroup;
+			children = (
+				1FEC98B42A601B1200C5C83B /* SubscriptionViewController.swift */,
+			);
+			path = Subscription;
+			sourceTree = "<group>";
+		};
+		1FEC98BD2A601C1700C5C83B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1F6C07792A57FF7A00B4EAFE /* HomeViewController.swift */,
+				1F2119E42A70032A000FEB49 /* InfoTableViewCell.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1FEC98BE2A601C2B00C5C83B /* Translation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Translation;
+			sourceTree = "<group>";
+		};
+		1FEF69FD2A653E590066CEC3 /* Credentials */ = {
+			isa = PBXGroup;
+			children = (
+				1FEF6A022A6544850066CEC3 /* CredentialsViewController.swift */,
+			);
+			path = Credentials;
+			sourceTree = "<group>";
+		};
+		9C6D412F832E35C7CEE6598F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F44DB6E09A4B53FCFAB8531B /* Pods_ESG_Connect.framework */,
+				FF465802BEEE4CD78E360D57 /* Pods_ESG_Connect_ESG_ConnectUITests.framework */,
+				92DA10686C5608D63791C0E7 /* Pods_ESG_ConnectTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E2C210AD4FCEE95AAC5DE259 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8898B6EFD67EE0E0A80C7E59 /* Pods-ESG Connect.debug.xcconfig */,
+				391BE7B7A253EDDD6ABC0E01 /* Pods-ESG Connect.release.xcconfig */,
+				C018E99237A18930C4A50CE8 /* Pods-ESG Connect-ESG ConnectUITests.debug.xcconfig */,
+				479D54E376C3686D4A6228F8 /* Pods-ESG Connect-ESG ConnectUITests.release.xcconfig */,
+				619D071D2BA46338BEB5EF35 /* Pods-ESG ConnectTests.debug.xcconfig */,
+				543F79F2DFB904D3620A47EE /* Pods-ESG ConnectTests.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,9 +255,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F6C079C2A57FF7C00B4EAFE /* Build configuration list for PBXNativeTarget "ESG Connect" */;
 			buildPhases = (
+				8827C76DA394B7A7E54E8E61 /* [CP] Check Pods Manifest.lock */,
 				1F6C076E2A57FF7A00B4EAFE /* Sources */,
 				1F6C076F2A57FF7A00B4EAFE /* Frameworks */,
 				1F6C07702A57FF7A00B4EAFE /* Resources */,
+				07E7F3B5251255608BBAFAA9 /* [CP] Embed Pods Frameworks */,
+				1FC9ABED2A70588E0066733E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -127,6 +275,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F6C079F2A57FF7C00B4EAFE /* Build configuration list for PBXNativeTarget "ESG ConnectTests" */;
 			buildPhases = (
+				DC72C6DFE3FF45D826A9F3FC /* [CP] Check Pods Manifest.lock */,
 				1F6C07842A57FF7C00B4EAFE /* Sources */,
 				1F6C07852A57FF7C00B4EAFE /* Frameworks */,
 				1F6C07862A57FF7C00B4EAFE /* Resources */,
@@ -145,9 +294,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F6C07A22A57FF7C00B4EAFE /* Build configuration list for PBXNativeTarget "ESG ConnectUITests" */;
 			buildPhases = (
+				BE68CCE57477DFA12C889972 /* [CP] Check Pods Manifest.lock */,
 				1F6C078E2A57FF7C00B4EAFE /* Sources */,
 				1F6C078F2A57FF7C00B4EAFE /* Frameworks */,
 				1F6C07902A57FF7C00B4EAFE /* Resources */,
+				922E20B3FC2504A562A306C0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -209,6 +360,8 @@
 			files = (
 				1F6C07822A57FF7B00B4EAFE /* LaunchScreen.storyboard in Resources */,
 				1F6C077F2A57FF7B00B4EAFE /* Assets.xcassets in Resources */,
+				1F2119E32A6FD008000FEB49 /* The Workable Logo - 4.png in Resources */,
+				1FEF6A052A654F710066CEC3 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,14 +381,147 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		07E7F3B5251255608BBAFAA9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ESG Connect/Pods-ESG Connect-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ESG Connect/Pods-ESG Connect-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ESG Connect/Pods-ESG Connect-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1FC9ABED2A70588E0066733E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+		};
+		8827C76DA394B7A7E54E8E61 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ESG Connect-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		922E20B3FC2504A562A306C0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ESG Connect-ESG ConnectUITests/Pods-ESG Connect-ESG ConnectUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ESG Connect-ESG ConnectUITests/Pods-ESG Connect-ESG ConnectUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ESG Connect-ESG ConnectUITests/Pods-ESG Connect-ESG ConnectUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE68CCE57477DFA12C889972 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ESG Connect-ESG ConnectUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC72C6DFE3FF45D826A9F3FC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ESG ConnectTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1F6C076E2A57FF7A00B4EAFE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F6C077A2A57FF7A00B4EAFE /* ViewController.swift in Sources */,
+				1F2119E52A70032A000FEB49 /* InfoTableViewCell.swift in Sources */,
+				1FEC98B72A601BBA00C5C83B /* TabBarViewController.swift in Sources */,
+				1FC9ABEF2A7059380066733E /* AppCheck.swift in Sources */,
+				1FEC98B32A601B0400C5C83B /* ProfileViewController.swift in Sources */,
+				1FB332C72A65D42B00A046C8 /* PersonalInfoViewController.swift in Sources */,
+				1FEC98AF2A601AF100C5C83B /* LogInViewController.swift in Sources */,
+				1F6C077A2A57FF7A00B4EAFE /* HomeViewController.swift in Sources */,
+				1FEF6A032A6544850066CEC3 /* CredentialsViewController.swift in Sources */,
+				1FB332C92A65D5CD00A046C8 /* SettingsTableViewCell.swift in Sources */,
 				1F6C07762A57FF7A00B4EAFE /* AppDelegate.swift in Sources */,
+				1FEC98B52A601B1200C5C83B /* SubscriptionViewController.swift in Sources */,
+				1FB332CB2A65D60300A046C8 /* FAQViewController.swift in Sources */,
 				1F6C07782A57FF7A00B4EAFE /* SceneDelegate.swift in Sources */,
+				1FEC98B12A601AFC00C5C83B /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,21 +682,25 @@
 		};
 		1F6C079D2A57FF7C00B4EAFE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8898B6EFD67EE0E0A80C7E59 /* Pods-ESG Connect.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "ESG Connect.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = NV57XZ3KBV;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "ESG Connect/Info.plist";
+				INFOPLIST_FILE = ESGConnect/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Workable;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -429,21 +719,25 @@
 		};
 		1F6C079E2A57FF7C00B4EAFE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 391BE7B7A253EDDD6ABC0E01 /* Pods-ESG Connect.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "ESG Connect.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = NV57XZ3KBV;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "ESG Connect/Info.plist";
+				INFOPLIST_FILE = ESGConnect/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Workable;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -462,6 +756,7 @@
 		};
 		1F6C07A02A57FF7C00B4EAFE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 619D071D2BA46338BEB5EF35 /* Pods-ESG ConnectTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -482,6 +777,7 @@
 		};
 		1F6C07A12A57FF7C00B4EAFE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 543F79F2DFB904D3620A47EE /* Pods-ESG ConnectTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -502,6 +798,7 @@
 		};
 		1F6C07A32A57FF7C00B4EAFE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C018E99237A18930C4A50CE8 /* Pods-ESG Connect-ESG ConnectUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -520,6 +817,7 @@
 		};
 		1F6C07A42A57FF7C00B4EAFE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 479D54E376C3686D4A6228F8 /* Pods-ESG Connect-ESG ConnectUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
