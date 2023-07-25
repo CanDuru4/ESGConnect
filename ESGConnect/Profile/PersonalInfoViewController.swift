@@ -23,8 +23,12 @@ class PersonalInfoViewController: UIViewController {
     var currentpasswordField = UITextField()
     var passwordField = UITextField()
     var passwordAuthenticateField = UITextField()
+    var locationField = UITextField()
+    var socialField = UITextField()
+    var education_employeeField = UITextField()
     var saveButton = UIButton()
-    
+    var useruid = (Auth.auth().currentUser?.uid)!
+    var userprofile = ""
 
     
 //MARK: Load
@@ -45,7 +49,7 @@ class PersonalInfoViewController: UIViewController {
         
         
         //MARK: Image Features
-        let imageCan = UIImage(named: "ESGLogo")
+        let imageCan = UIImage(named: "Logo")
         let imageView = UIImageView(image: imageCan)
         imageView.clipsToBounds = true
         imageView.contentMode = UIView.ContentMode.scaleAspectFit
@@ -55,7 +59,7 @@ class PersonalInfoViewController: UIViewController {
         //MARK: Name Field Features
         nameField.placeholder = "Name / Company Name"
         nameField.borderStyle = .roundedRect
-        nameField.layer.borderColor = CGColor(red: 255/255, green: 191/255, blue: 69/255, alpha: 1)
+        nameField.layer.borderColor = CGColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
         nameField.layer.borderWidth = CGFloat(1)
         nameField.autocorrectionType = .no
         view.addSubview(nameField)
@@ -64,7 +68,7 @@ class PersonalInfoViewController: UIViewController {
         //MARK: Email Field Features
         emailField.placeholder = "Email"
         emailField.borderStyle = .roundedRect
-        emailField.layer.borderColor = CGColor(red: 255/255, green: 191/255, blue: 69/255, alpha: 1)
+        emailField.layer.borderColor = CGColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
         emailField.layer.borderWidth = CGFloat(1)
         emailField.autocorrectionType = .no
         view.addSubview(emailField)
@@ -73,7 +77,7 @@ class PersonalInfoViewController: UIViewController {
         //MARK: Current Password Field Features
         currentpasswordField.placeholder = "Current Password"
         currentpasswordField.borderStyle = .roundedRect
-        currentpasswordField.layer.borderColor = CGColor(red: 255/255, green: 191/255, blue: 69/255, alpha: 1)
+        currentpasswordField.layer.borderColor = CGColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
         currentpasswordField.layer.borderWidth = CGFloat(1)
         view.addSubview(currentpasswordField)
         currentpasswordField.isSecureTextEntry = true
@@ -83,7 +87,7 @@ class PersonalInfoViewController: UIViewController {
         //MARK: New Password Field Features
         passwordField.placeholder = "New Password"
         passwordField.borderStyle = .roundedRect
-        passwordField.layer.borderColor = CGColor(red: 255/255, green: 191/255, blue: 69/255, alpha: 1)
+        passwordField.layer.borderColor = CGColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
         passwordField.layer.borderWidth = CGFloat(1)
         view.addSubview(passwordField)
         passwordField.isSecureTextEntry = true
@@ -93,12 +97,42 @@ class PersonalInfoViewController: UIViewController {
         //MARK: Authenticate Password Field Features
         passwordAuthenticateField.placeholder = "New Password Authenticate"
         passwordAuthenticateField.borderStyle = .roundedRect
-        passwordAuthenticateField.layer.borderColor = CGColor(red: 255/255, green: 191/255, blue: 69/255, alpha: 1)
+        passwordAuthenticateField.layer.borderColor = CGColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
         passwordAuthenticateField.layer.borderWidth = CGFloat(1)
         view.addSubview(passwordAuthenticateField)
         passwordAuthenticateField.isSecureTextEntry = true
         passwordAuthenticateField.autocorrectionType = .no
         passwordAuthenticateField.translatesAutoresizingMaskIntoConstraints = false
+        
+        //MARK: Location Field Feature
+        locationField.placeholder = "Location (optional)"
+        locationField.borderStyle = .roundedRect
+        locationField.layer.borderColor = CGColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
+        locationField.layer.borderWidth = CGFloat(1)
+        view.addSubview(locationField)
+        locationField.autocapitalizationType = .none
+        locationField.autocorrectionType = .no
+        locationField.translatesAutoresizingMaskIntoConstraints = false
+        
+        //MARK: Education Field Feature
+        education_employeeField.placeholder = "Education Status (optional)"
+        education_employeeField.borderStyle = .roundedRect
+        education_employeeField.layer.borderColor = CGColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
+        education_employeeField.layer.borderWidth = CGFloat(1)
+        view.addSubview(education_employeeField)
+        education_employeeField.autocapitalizationType = .none
+        education_employeeField.autocorrectionType = .no
+        education_employeeField.translatesAutoresizingMaskIntoConstraints = false
+        
+        //MARK: Website  Field Feature
+        socialField.placeholder = "Website URL (optional)"
+        socialField.borderStyle = .roundedRect
+        socialField.layer.borderColor = CGColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
+        socialField.layer.borderWidth = CGFloat(1)
+        view.addSubview(socialField)
+        socialField.autocapitalizationType = .none
+        socialField.autocorrectionType = .no
+        socialField.translatesAutoresizingMaskIntoConstraints = false
 
         //MARK: Save Button Field Features
         saveButton.backgroundColor = UIColor(named: "AppYellow")
@@ -118,7 +152,7 @@ class PersonalInfoViewController: UIViewController {
             
             //MARK: Image Constraints
             imageView.centerXAnchor.constraint(equalTo: nameField.centerXAnchor),
-            imageView.bottomAnchor.constraint(equalTo: nameField.topAnchor, constant: 75),
+            imageView.bottomAnchor.constraint(equalTo: nameField.topAnchor, constant: 40),
             imageView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 50),
             imageView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -50),
             
@@ -157,9 +191,30 @@ class PersonalInfoViewController: UIViewController {
             passwordAuthenticateField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
             passwordAuthenticateField.heightAnchor.constraint(equalToConstant: 35),
             
+            //MARK: Location Field Constraints
+            locationField.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+            locationField.topAnchor.constraint(equalTo: passwordAuthenticateField.bottomAnchor, constant: 5),
+            locationField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            locationField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            locationField.heightAnchor.constraint(equalToConstant: 35),
+            
+            //MARK: Employee Number / Education Status Field Constraints
+            education_employeeField.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+            education_employeeField.topAnchor.constraint(equalTo: locationField.bottomAnchor, constant: 5),
+            education_employeeField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            education_employeeField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            education_employeeField.heightAnchor.constraint(equalToConstant: 35),
+
+            //MARK: Social Field Constraints
+            socialField.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+            socialField.topAnchor.constraint(equalTo: education_employeeField.bottomAnchor, constant: 5),
+            socialField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            socialField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            socialField.heightAnchor.constraint(equalToConstant: 35),
+            
             //MARK: Save Button Constraints
             saveButton.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
-            saveButton.topAnchor.constraint(equalTo: passwordAuthenticateField.bottomAnchor, constant: 10),
+            saveButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10),
             saveButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 30),
             saveButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -30),
             saveButton.heightAnchor.constraint(equalToConstant: 35),
@@ -178,7 +233,6 @@ class PersonalInfoViewController: UIViewController {
         if error != nil {
 
         } else {
-            
             //MARK: Name, Email, and Password Field Checked
             let user = Auth.auth().currentUser
             let email = user?.email?.lowercased()
@@ -203,52 +257,72 @@ class PersonalInfoViewController: UIViewController {
     
 
 //MARK: Get User Data
-    func getUserData(){
-        userid(name: "String") { (useruid) in
-            Auth.auth().addStateDidChangeListener { (auth, user) in
-                if (user != nil) {
-                    let user = Auth.auth().currentUser
-                    let db = Firestore.firestore()
-                    db.collection("users").document(useruid)
-                        .addSnapshotListener { documentSnapshot, error in
-                          guard let document = documentSnapshot else {
-                            print("Error fetching document: \(error!)")
-                            return
-                          }
-                          guard let data = document.data()?["name"] else {
-                            print("Document data was empty.")
-                            return
-                          }
-                            self.nameField.text = data as? String
-                            self.emailField.text = user?.email
-                        }
-                }
+func getUserData(){
+    let user = Auth.auth().currentUser
+    let db = Firestore.firestore()
+    db.collection("users").document(useruid)
+        .addSnapshotListener { documentSnapshot, error in
+          guard let document = documentSnapshot else {
+            print("Error fetching document: \(error!)")
+            return
+          }
+            
+            
+            guard let dataUser = document.data()?["userprofile"] else {
+                print("Document data was empty.")
+                return
             }
-        }
-    }
-    
-
-
-//MARK: Get User Path
-    func userid(name: String, completion: @escaping (String) -> Void){
-        let db = Firestore.firestore()
-        let user = Auth.auth().currentUser
-        let uid = user!.uid
-        db.collection("users").whereField("uid", isEqualTo: uid)
-            .getDocuments() { (querySnapshot, err) in
-                if err != nil {
-                    let alert = UIAlertController(title: "An error occured. Try again.", message: "", preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
-                    self.present(alert, animated: true, completion: nil)
-                } else {
-                    for document in (querySnapshot!.documents) {
-                        let useruid = document.documentID
-                        completion(useruid)
-                    }
+            self.userprofile = dataUser as! String
+            if dataUser as! String == "employee" {
+                guard let dataName = document.data()?["name"] else {
+                    print("Document data was empty.")
+                    return
                 }
+                guard let dataEducation = document.data()?["educationstatus"] else {
+                    print("Document data was empty.")
+                    return
+                }
+                guard let dataSocial = document.data()?["social"] else {
+                    print("Document data was empty.")
+                    return
+                }
+                guard let dataLocation = document.data()?["location"] else {
+                    print("Document data was empty.")
+                    return
+                }
+                
+                self.nameField.text = dataName as? String ?? ""
+                self.emailField.text = user?.email
+                self.socialField.text = dataSocial as? String ?? ""
+                self.education_employeeField.text = dataEducation as? String ?? ""
+                self.locationField.text = dataLocation as? String ?? ""
+            }
+            if dataUser as! String == "company" {
+                guard let dataName = document.data()?["name"] else {
+                    print("Document data was empty.")
+                    return
+                }
+                guard let dataEducation = document.data()?["employeenumber"] else {
+                    print("Document data was empty.")
+                    return
+                }
+                guard let dataSocial = document.data()?["website"] else {
+                    print("Document data was empty.")
+                    return
+                }
+                guard let dataLocation = document.data()?["location"] else {
+                    print("Document data was empty.")
+                    return
+                }
+                
+                self.nameField.text = dataName as? String ?? ""
+                self.emailField.text = user?.email
+                self.socialField.text = dataSocial as? String ?? ""
+                self.education_employeeField.text = dataEducation as? String ?? ""
+                self.locationField.text = dataLocation as? String ?? ""
             }
     }
-    
+}
     
 
 //MARK: Update User Function
@@ -256,26 +330,33 @@ class PersonalInfoViewController: UIViewController {
         let changeName =  nameField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         let changeEmail = emailField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         let changePassword = passwordField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let changeSocial = socialField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let changeLocation = locationField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let changeEducation_Employee = education_employeeField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
 
         let db = Firestore.firestore()
-        let user = Auth.auth().currentUser
-        let uid = user!.uid
         
         //MARK: Update User Name
-        userid(name: "String") { (useruid) in
-            Auth.auth().addStateDidChangeListener { (auth, user) in
-                if (user != nil) {
-                    db.collection("users").document(useruid).updateData(["name": changeName, "uid": uid]) { (error) in
-                        
-                        if error != nil {
-                            let alert = UIAlertController(title: "An error occured. Try again.", message: "", preferredStyle: .alert)
-                            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
-                            self.present(alert, animated: true, completion: nil)
-                        }
-                    }
+        if userprofile == "employee" {
+            db.collection("users").document(useruid).updateData(["name":changeName, "educationstatus": changeEducation_Employee, "social": changeSocial, "location": changeLocation]) { (error) in
+                
+                if error != nil {
+                    let alert = UIAlertController(title: "An error occured. Try again.", message: "", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }
+            }
+        } else if userprofile == "company" {
+            db.collection("users").document(useruid).updateData(["name":changeName, "employeenumber": changeEducation_Employee, "website": changeSocial, "location": changeLocation]) { (error) in
+                
+                if error != nil {
+                    let alert = UIAlertController(title: "An error occured. Try again.", message: "", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
                 }
             }
         }
+
         
         //MARK: Update Email
         Auth.auth().currentUser?.updateEmail(to: changeEmail) { (error) in
@@ -339,7 +420,7 @@ class PersonalInfoViewController: UIViewController {
         let authenticatecleanedPassword = passwordAuthenticateField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         if cleanedPassword != authenticatecleanedPassword{
             let alert = UIAlertController(title: "New password and authentication password do not match. Try again.", message: "", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: String(localized: "okButton"), style: UIAlertAction.Style.default, handler: nil))
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             return "Doğrulama şifreniz ile girdiğiniz şifre uyuşmuyor. "
         }

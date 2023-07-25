@@ -13,7 +13,7 @@ class TabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tabBar.backgroundColor = UIColor(named: "AppBlueDarker")
-        tabBar.unselectedItemTintColor = .black
+        tabBar.unselectedItemTintColor = .white
         tabBar.tintColor = UIColor(named: "AppYellow")
         setupVCs()
     }
@@ -21,9 +21,9 @@ class TabBarViewController: UITabBarController {
     //MARK: Create ViewControllers
     func setupVCs() {
           viewControllers = [
-            createNavController(for: HomeViewController(), title: NSLocalizedString("", comment: ""), image: UIImage(systemName: "house.fill")!.withRenderingMode(.alwaysOriginal).withTintColor(.black)),
-              createNavController(for: SearchingViewController(), title: NSLocalizedString("", comment: ""), image: UIImage(systemName: "magnifyingglass")!.withRenderingMode(.alwaysOriginal).withTintColor(.black)),
-              createNavController(for: ProfileViewController(), title: NSLocalizedString("", comment: ""), image: UIImage(systemName: "person.fill")!.withRenderingMode(.alwaysOriginal).withTintColor(.black))
+            createNavController(for: HomeViewController(), title: NSLocalizedString("", comment: ""), image: UIImage(systemName: "house.fill")!.withRenderingMode(.alwaysOriginal).withTintColor(UIColor(named: "AppYellow")!)),
+            createNavController(for: SubscriptionViewController(), title: NSLocalizedString("", comment: ""), image: UIImage(systemName: "creditcard.fill")!.withRenderingMode(.alwaysOriginal).withTintColor(UIColor(named: "AppYellow")!)),
+            createNavController(for: ProfileViewController(), title: NSLocalizedString("", comment: ""), image: UIImage(systemName: "person.fill")!.withRenderingMode(.alwaysOriginal).withTintColor(UIColor(named: "AppYellow")!))
           ]
       }
     
@@ -32,7 +32,7 @@ class TabBarViewController: UITabBarController {
     fileprivate func createNavController(for rootViewController: UIViewController,
                                                     title: String,
                                                     image: UIImage) -> UIViewController {
-          let items = ["Home", "Search", "Profile"]
+          let items = ["Home", "Subscription", "Profile"]
           i = i+1
           let navController = UINavigationController(rootViewController: rootViewController)
 

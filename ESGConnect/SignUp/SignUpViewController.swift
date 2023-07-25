@@ -24,6 +24,9 @@ class SignUpViewController: UIViewController {
     var companyField = UIButton()
     var companyText = UILabel()
     var passwordAuthenticateField = UITextField()
+    var locationField = UITextField()
+    var socialField = UITextField()
+    var education_employeeField = UITextField()
     var signUpButton = UIButton()
     var userprofile = ""
     
@@ -33,7 +36,9 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor(named: "AppBlue")
         setLabels()
-        
+        education_employeeField.isHidden = true
+        socialField.isHidden = true
+
         //MARK: Hide Keyboard
         self.hideKeyboardWhenTappedAround()
     }
@@ -45,7 +50,7 @@ class SignUpViewController: UIViewController {
         
         
         //MARK: Image Feature
-        let imageLogo = UIImage(named: "ESGLogo")
+        let imageLogo = UIImage(named: "Logo")
         let imageView = UIImageView(image: imageLogo)
         imageView.clipsToBounds = true
         imageView.contentMode = UIView.ContentMode.scaleAspectFit
@@ -55,7 +60,7 @@ class SignUpViewController: UIViewController {
         //MARK: Name Field Feature
         nameField.placeholder = "Name / Company Name"
         nameField.borderStyle = .roundedRect
-        nameField.layer.borderColor = CGColor(red: 255/255, green: 191/255, blue: 69/255, alpha: 1)
+        nameField.layer.borderColor = CGColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
         nameField.layer.borderWidth = CGFloat(1)
         nameField.autocorrectionType = .no
         view.addSubview(nameField)
@@ -64,7 +69,7 @@ class SignUpViewController: UIViewController {
         //MARK: Email Field Feature
         emailField.placeholder = "Email"
         emailField.borderStyle = .roundedRect
-        emailField.layer.borderColor = CGColor(red: 255/255, green: 191/255, blue: 69/255, alpha: 1)
+        emailField.layer.borderColor = CGColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
         emailField.layer.borderWidth = CGFloat(1)
         emailField.autocorrectionType = .no
         emailField.autocapitalizationType = .none
@@ -74,27 +79,27 @@ class SignUpViewController: UIViewController {
         //MARK: Password Field Feature
         passwordField.placeholder = "Password"
         passwordField.borderStyle = .roundedRect
-        passwordField.layer.borderColor = CGColor(red: 255/255, green: 191/255, blue: 69/255, alpha: 1)
+        passwordField.layer.borderColor = CGColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
         passwordField.layer.borderWidth = CGFloat(1)
         view.addSubview(passwordField)
         passwordField.isSecureTextEntry = true
         passwordField.autocorrectionType = .no
-        emailField.autocapitalizationType = .none
+        passwordField.autocapitalizationType = .none
         passwordField.translatesAutoresizingMaskIntoConstraints = false
         
         //MARK: Password Authenticate Field Feature
         passwordAuthenticateField.placeholder = "Authenticate Password"
         passwordAuthenticateField.borderStyle = .roundedRect
-        passwordAuthenticateField.layer.borderColor = CGColor(red: 255/255, green: 191/255, blue: 69/255, alpha: 1)
+        passwordAuthenticateField.layer.borderColor = CGColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
         passwordAuthenticateField.layer.borderWidth = CGFloat(1)
         view.addSubview(passwordAuthenticateField)
         passwordAuthenticateField.isSecureTextEntry = true
         passwordAuthenticateField.autocorrectionType = .no
-        emailField.autocapitalizationType = .none
+        passwordAuthenticateField.autocapitalizationType = .none
         passwordAuthenticateField.translatesAutoresizingMaskIntoConstraints = false
         
         //MARK: Employee Button Feature
-        employeeField.layer.borderColor = CGColor(red: 255/255, green: 191/255, blue: 69/255, alpha: 1)
+        employeeField.layer.borderColor = CGColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
         employeeField.layer.borderWidth = CGFloat(1)
         employeeField.layer.cornerRadius = 15
         employeeField.clipsToBounds = true
@@ -109,7 +114,7 @@ class SignUpViewController: UIViewController {
         employeeText.translatesAutoresizingMaskIntoConstraints = false
 
         //MARK: Company Button Feature
-        companyField.layer.borderColor = CGColor(red: 255/255, green: 191/255, blue: 69/255, alpha: 1)
+        companyField.layer.borderColor = CGColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
         companyField.layer.borderWidth = CGFloat(1)
         companyField.layer.cornerRadius = 15
         companyField.clipsToBounds = true
@@ -122,6 +127,36 @@ class SignUpViewController: UIViewController {
         companyText.textColor = UIColor(named: "AppYellow")
         view.addSubview(companyText)
         companyText.translatesAutoresizingMaskIntoConstraints = false
+        
+        //MARK: Location Field Feature
+        locationField.placeholder = "Location (optional)"
+        locationField.borderStyle = .roundedRect
+        locationField.layer.borderColor = CGColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
+        locationField.layer.borderWidth = CGFloat(1)
+        view.addSubview(locationField)
+        locationField.autocapitalizationType = .none
+        locationField.autocorrectionType = .no
+        locationField.translatesAutoresizingMaskIntoConstraints = false
+        
+        //MARK: Education Field Feature
+        education_employeeField.placeholder = "Education Status (optional)"
+        education_employeeField.borderStyle = .roundedRect
+        education_employeeField.layer.borderColor = CGColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
+        education_employeeField.layer.borderWidth = CGFloat(1)
+        view.addSubview(education_employeeField)
+        education_employeeField.autocapitalizationType = .none
+        education_employeeField.autocorrectionType = .no
+        education_employeeField.translatesAutoresizingMaskIntoConstraints = false
+        
+        //MARK: Website  Field Feature
+        socialField.placeholder = "Website URL (optional)"
+        socialField.borderStyle = .roundedRect
+        socialField.layer.borderColor = CGColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
+        socialField.layer.borderWidth = CGFloat(1)
+        view.addSubview(socialField)
+        socialField.autocapitalizationType = .none
+        socialField.autocorrectionType = .no
+        socialField.translatesAutoresizingMaskIntoConstraints = false
 
         //MARK: Sign Up Button Feature
         signUpButton.backgroundColor = UIColor(named: "AppYellow")
@@ -141,13 +176,13 @@ class SignUpViewController: UIViewController {
             
             //MARK: Image Constraints
             imageView.centerXAnchor.constraint(equalTo: nameField.centerXAnchor),
-            imageView.bottomAnchor.constraint(equalTo: nameField.topAnchor, constant: 75),
+            imageView.bottomAnchor.constraint(equalTo: nameField.topAnchor, constant: 40),
             imageView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 50),
             imageView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -50),
             
             //MARK: Name Field Constraints
             nameField.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
-            nameField.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -50),
+            nameField.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -80),
             nameField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
             nameField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
             nameField.heightAnchor.constraint(equalToConstant: 35),
@@ -195,11 +230,31 @@ class SignUpViewController: UIViewController {
             //MARK: Employee Text Field Constraints
             employeeText.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
             employeeText.centerYAnchor.constraint(equalTo: employeeField.centerYAnchor),
+            
+            //MARK: Location Field Constraints
+            locationField.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+            locationField.topAnchor.constraint(equalTo: employeeField.bottomAnchor, constant: 5),
+            locationField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            locationField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            locationField.heightAnchor.constraint(equalToConstant: 35),
+            
+            //MARK: Employee Number / Education Status Field Constraints
+            education_employeeField.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+            education_employeeField.topAnchor.constraint(equalTo: locationField.bottomAnchor, constant: 5),
+            education_employeeField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            education_employeeField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            education_employeeField.heightAnchor.constraint(equalToConstant: 35),
 
+            //MARK: Social Field Constraints
+            socialField.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+            socialField.topAnchor.constraint(equalTo: education_employeeField.bottomAnchor, constant: 5),
+            socialField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            socialField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            socialField.heightAnchor.constraint(equalToConstant: 35),
             
             //MARK: Sign Up Button Constraints
             signUpButton.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
-            signUpButton.topAnchor.constraint(equalTo: companyField.bottomAnchor, constant: 10),
+            signUpButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10),
             signUpButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 30),
             signUpButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -30),
             signUpButton.heightAnchor.constraint(equalToConstant: 35),
@@ -212,10 +267,21 @@ class SignUpViewController: UIViewController {
             userprofile = ""
             companyField.backgroundColor = .none
             employeeField.backgroundColor = .none
+            education_employeeField.placeholder = ""
+            education_employeeField.isHidden = true
+            socialField.placeholder = ""
+            socialField.isHidden = true
+            nameField.placeholder = "Name / Company Name"
         } else {
             userprofile = "employee"
             companyField.backgroundColor = .none
             employeeField.backgroundColor = UIColor(named: "AppYellow")
+            education_employeeField.placeholder = "Education Status (optional)"
+            education_employeeField.isHidden = false
+            socialField.placeholder = "Socials Link (optional)"
+            socialField.isHidden = false
+            nameField.placeholder = "Name"
+            
         }
     }
     
@@ -225,10 +291,20 @@ class SignUpViewController: UIViewController {
             userprofile = ""
             companyField.backgroundColor = .none
             employeeField.backgroundColor = .none
+            education_employeeField.placeholder = ""
+            education_employeeField.isHidden = true
+            socialField.placeholder = ""
+            socialField.isHidden = true
+            nameField.placeholder = "Name / Company Name"
         } else {
             userprofile = "company"
             companyField.backgroundColor = UIColor(named: "AppYellow")
             employeeField.backgroundColor = .none
+            education_employeeField.placeholder = "Approximate Employee Number (optional)"
+            education_employeeField.isHidden = false
+            socialField.placeholder = "Website Link (optional)"
+            socialField.isHidden = false
+            nameField.placeholder = "Company Name"
         }
     }
     
@@ -247,6 +323,9 @@ class SignUpViewController: UIViewController {
             let name = nameField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let email = emailField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let password = passwordField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let location = locationField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let education_employee = education_employeeField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let social = socialField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             
             //MARK: Create User
             Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
@@ -257,20 +336,33 @@ class SignUpViewController: UIViewController {
                 }
                 else {
                     let db = Firestore.firestore()
-                    db.collection("users").addDocument(data: ["name":name, "userprofile": self.userprofile, "uid": result!.user.uid]) { (error) in
-                        if error != nil {
-                            let alert = UIAlertController(title: "An error occured. Try again.", message: "", preferredStyle: .alert)
-                            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
-                            self.present(alert, animated: true, completion: nil)
+                    if self.userprofile == "company" {
+                        db.collection("users").document(Auth.auth().currentUser!.uid).setData(["name":name, "userprofile": self.userprofile, "uid": Auth.auth().currentUser!.uid, "employeenumber": education_employee, "website": social, "location": location]) { err in
+                            if err != nil {
+                                let alert = UIAlertController(title: "An error occured. Try again.", message: "", preferredStyle: .alert)
+                                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+                                self.present(alert, animated: true, completion: nil)
+                            } else {
+                                print("Document successfully written!")
+                            }
+                        }
+                    } else if self.userprofile == "employee" {
+                        db.collection("users").document(Auth.auth().currentUser!.uid).setData(["name":name, "userprofile": self.userprofile, "uid": result!.user.uid, "educationstatus": education_employee, "social": social, "location": location]) { err in
+                            if err != nil {
+                                let alert = UIAlertController(title: "An error occured. Try again.", message: "", preferredStyle: .alert)
+                                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+                                self.present(alert, animated: true, completion: nil)
+                            } else {
+                                print("Document successfully written!")
+                            }
                         }
                     }
+
                     UserDefaults.standard.set(Auth.auth().currentUser!.uid, forKey: "user_uid_key")
                     UserDefaults.standard.synchronize()
                     Auth.auth().currentUser?.sendEmailVerification { error in
                     }
                     self.dismiss(animated: true)
-                    self.navigationController?.pushViewController(TabBarViewController(), animated: true)
-                    self.navigationController?.setNavigationBarHidden(true, animated: true)
                 }
             }
         }

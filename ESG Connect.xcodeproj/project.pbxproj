@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F2119E32A6FD008000FEB49 /* The Workable Logo - 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F2119E22A6FD008000FEB49 /* The Workable Logo - 4.png */; };
+		1F2119E52A70032A000FEB49 /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2119E42A70032A000FEB49 /* InfoTableViewCell.swift */; };
 		1F6C07762A57FF7A00B4EAFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6C07752A57FF7A00B4EAFE /* AppDelegate.swift */; };
 		1F6C07782A57FF7A00B4EAFE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6C07772A57FF7A00B4EAFE /* SceneDelegate.swift */; };
 		1F6C077A2A57FF7A00B4EAFE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6C07792A57FF7A00B4EAFE /* HomeViewController.swift */; };
@@ -15,10 +17,11 @@
 		1FB332C72A65D42B00A046C8 /* PersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB332C62A65D42B00A046C8 /* PersonalInfoViewController.swift */; };
 		1FB332C92A65D5CD00A046C8 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB332C82A65D5CD00A046C8 /* SettingsTableViewCell.swift */; };
 		1FB332CB2A65D60300A046C8 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB332CA2A65D60300A046C8 /* FAQViewController.swift */; };
+		1FC9ABEF2A7059380066733E /* AppCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC9ABEE2A7059380066733E /* AppCheck.swift */; };
 		1FEC98AF2A601AF100C5C83B /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEC98AE2A601AF100C5C83B /* LogInViewController.swift */; };
 		1FEC98B12A601AFC00C5C83B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEC98B02A601AFC00C5C83B /* SignUpViewController.swift */; };
 		1FEC98B32A601B0400C5C83B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEC98B22A601B0400C5C83B /* ProfileViewController.swift */; };
-		1FEC98B52A601B1200C5C83B /* SearchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEC98B42A601B1200C5C83B /* SearchingViewController.swift */; };
+		1FEC98B52A601B1200C5C83B /* SubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEC98B42A601B1200C5C83B /* SubscriptionViewController.swift */; };
 		1FEC98B72A601BBA00C5C83B /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEC98B62A601BBA00C5C83B /* TabBarViewController.swift */; };
 		1FEF6A032A6544850066CEC3 /* CredentialsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEF6A022A6544850066CEC3 /* CredentialsViewController.swift */; };
 		1FEF6A052A654F710066CEC3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1FEF6A042A654F710066CEC3 /* GoogleService-Info.plist */; };
@@ -47,6 +50,9 @@
 /* Begin PBXFileReference section */
 		1F097B1E2A5C9C15005FBA32 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1F097B1F2A5C9C22005FBA32 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		1F2119E22A6FD008000FEB49 /* The Workable Logo - 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "The Workable Logo - 4.png"; sourceTree = "<group>"; };
+		1F2119E42A70032A000FEB49 /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
+		1F2119E62A704FAB000FEB49 /* ESG Connect.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ESG Connect.entitlements"; sourceTree = "<group>"; };
 		1F6C07722A57FF7A00B4EAFE /* ESG Connect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ESG Connect.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F6C07752A57FF7A00B4EAFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F6C07772A57FF7A00B4EAFE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,10 +65,11 @@
 		1FB332C62A65D42B00A046C8 /* PersonalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoViewController.swift; sourceTree = "<group>"; };
 		1FB332C82A65D5CD00A046C8 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		1FB332CA2A65D60300A046C8 /* FAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
+		1FC9ABEE2A7059380066733E /* AppCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCheck.swift; sourceTree = "<group>"; };
 		1FEC98AE2A601AF100C5C83B /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		1FEC98B02A601AFC00C5C83B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		1FEC98B22A601B0400C5C83B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		1FEC98B42A601B1200C5C83B /* SearchingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchingViewController.swift; sourceTree = "<group>"; };
+		1FEC98B42A601B1200C5C83B /* SubscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionViewController.swift; sourceTree = "<group>"; };
 		1FEC98B62A601BBA00C5C83B /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		1FEF6A022A6544850066CEC3 /* CredentialsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsViewController.swift; sourceTree = "<group>"; };
 		1FEF6A042A654F710066CEC3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -105,9 +112,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F2119E12A6FCFE1000FEB49 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				1F2119E22A6FD008000FEB49 /* The Workable Logo - 4.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		1F6C07692A57FF7A00B4EAFE = {
 			isa = PBXGroup;
 			children = (
+				1F2119E62A704FAB000FEB49 /* ESG Connect.entitlements */,
 				1F097B1F2A5C9C22005FBA32 /* CHANGELOG.md */,
 				1F097B1E2A5C9C15005FBA32 /* README.md */,
 				1F6C07742A57FF7A00B4EAFE /* ESGConnect */,
@@ -130,13 +146,15 @@
 		1F6C07742A57FF7A00B4EAFE /* ESGConnect */ = {
 			isa = PBXGroup;
 			children = (
+				1F2119E12A6FCFE1000FEB49 /* Images */,
 				1FEC98BE2A601C2B00C5C83B /* Translation */,
 				1FEF69FD2A653E590066CEC3 /* Credentials */,
 				1FEC98B92A601BD300C5C83B /* SignUp */,
 				1FEC98B82A601BC200C5C83B /* LogIn */,
 				1FEC98BD2A601C1700C5C83B /* Home */,
-				1FEC98BB2A601BDF00C5C83B /* Search */,
+				1FEC98BB2A601BDF00C5C83B /* Subscription */,
 				1FEC98BA2A601BD900C5C83B /* Profile */,
+				1FC9ABEE2A7059380066733E /* AppCheck.swift */,
 				1F6C07752A57FF7A00B4EAFE /* AppDelegate.swift */,
 				1F6C07772A57FF7A00B4EAFE /* SceneDelegate.swift */,
 				1FEC98B62A601BBA00C5C83B /* TabBarViewController.swift */,
@@ -175,18 +193,19 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
-		1FEC98BB2A601BDF00C5C83B /* Search */ = {
+		1FEC98BB2A601BDF00C5C83B /* Subscription */ = {
 			isa = PBXGroup;
 			children = (
-				1FEC98B42A601B1200C5C83B /* SearchingViewController.swift */,
+				1FEC98B42A601B1200C5C83B /* SubscriptionViewController.swift */,
 			);
-			path = Search;
+			path = Subscription;
 			sourceTree = "<group>";
 		};
 		1FEC98BD2A601C1700C5C83B /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				1F6C07792A57FF7A00B4EAFE /* HomeViewController.swift */,
+				1F2119E42A70032A000FEB49 /* InfoTableViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -241,6 +260,7 @@
 				1F6C076F2A57FF7A00B4EAFE /* Frameworks */,
 				1F6C07702A57FF7A00B4EAFE /* Resources */,
 				07E7F3B5251255608BBAFAA9 /* [CP] Embed Pods Frameworks */,
+				1FC9ABED2A70588E0066733E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -340,6 +360,7 @@
 			files = (
 				1F6C07822A57FF7B00B4EAFE /* LaunchScreen.storyboard in Resources */,
 				1F6C077F2A57FF7B00B4EAFE /* Assets.xcassets in Resources */,
+				1F2119E32A6FD008000FEB49 /* The Workable Logo - 4.png in Resources */,
 				1FEF6A052A654F710066CEC3 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,6 +398,25 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ESG Connect/Pods-ESG Connect-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		1FC9ABED2A70588E0066733E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
 		};
 		8827C76DA394B7A7E54E8E61 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -468,7 +508,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F2119E52A70032A000FEB49 /* InfoTableViewCell.swift in Sources */,
 				1FEC98B72A601BBA00C5C83B /* TabBarViewController.swift in Sources */,
+				1FC9ABEF2A7059380066733E /* AppCheck.swift in Sources */,
 				1FEC98B32A601B0400C5C83B /* ProfileViewController.swift in Sources */,
 				1FB332C72A65D42B00A046C8 /* PersonalInfoViewController.swift in Sources */,
 				1FEC98AF2A601AF100C5C83B /* LogInViewController.swift in Sources */,
@@ -476,7 +518,7 @@
 				1FEF6A032A6544850066CEC3 /* CredentialsViewController.swift in Sources */,
 				1FB332C92A65D5CD00A046C8 /* SettingsTableViewCell.swift in Sources */,
 				1F6C07762A57FF7A00B4EAFE /* AppDelegate.swift in Sources */,
-				1FEC98B52A601B1200C5C83B /* SearchingViewController.swift in Sources */,
+				1FEC98B52A601B1200C5C83B /* SubscriptionViewController.swift in Sources */,
 				1FB332CB2A65D60300A046C8 /* FAQViewController.swift in Sources */,
 				1F6C07782A57FF7A00B4EAFE /* SceneDelegate.swift in Sources */,
 				1FEC98B12A601AFC00C5C83B /* SignUpViewController.swift in Sources */,
@@ -644,19 +686,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "ESG Connect.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = NV57XZ3KBV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ESGConnect/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "ESG Connect";
+				INFOPLIST_KEY_CFBundleDisplayName = Workable;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -679,19 +723,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "ESG Connect.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = NV57XZ3KBV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ESGConnect/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "ESG Connect";
+				INFOPLIST_KEY_CFBundleDisplayName = Workable;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

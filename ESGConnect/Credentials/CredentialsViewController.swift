@@ -28,7 +28,6 @@ class CredentialsViewController: UIViewController {
                self.navigationController?.pushViewController(TabBarViewController(), animated: true)
                self.navigationController?.setNavigationBarHidden(true, animated: true)
            } else {
-               print("loggedout")
            }
         }
         self.setLabels()
@@ -41,7 +40,7 @@ class CredentialsViewController: UIViewController {
         
         
         //MARK: Image Features
-        let imageLogo = UIImage(named: "ESGLogo")
+        let imageLogo = UIImage(named: "Logo")
         let imageView = UIImageView(image: imageLogo)
         imageView.clipsToBounds = true
         imageView.contentMode = UIView.ContentMode.scaleAspectFit
@@ -76,7 +75,7 @@ class CredentialsViewController: UIViewController {
             
             //MARK: Image Constraints
             imageView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
-            imageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50),
+            imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -50),
             imageView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 50),
             imageView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -50),
             

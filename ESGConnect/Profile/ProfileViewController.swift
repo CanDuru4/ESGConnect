@@ -137,47 +137,19 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     
     //MARK: Get User Data
     func getUserData(){
-        userid(name: "String") { (useruid) in
-            Auth.auth().addStateDidChangeListener { (auth, user) in
-                if (user != nil) {
-                    let db = Firestore.firestore()
-                    db.collection("users").document(useruid)
-                        .addSnapshotListener { documentSnapshot, error in
-                          guard let document = documentSnapshot else {
-                            print("Error fetching document: \(error!)")
-                            return
-                          }
-                          guard let data = document.data()?["name"] else {
-                            print("Document data was empty.")
-                            return
-                          }
-                            self.hiText.text = ("Hi, " + ((data) as! String))
-                            self.hiText.attributedText = self.addSpecificColorText(fullString: self.hiText.text! as NSString, colorPartOfString: "Hi, ")
-                        }
-                }
-            }
-        }
-    }
-    
-    
-    
-    //MARK: Get User Path
-    func userid(name: String, completion: @escaping (String) -> Void){
         let db = Firestore.firestore()
-        let user = Auth.auth().currentUser
-        let uid = user!.uid
-        db.collection("users").whereField("uid", isEqualTo: uid)
-            .getDocuments() { (querySnapshot, err) in
-                if err != nil {
-                    let alert = UIAlertController(title: "An error occured. Try again.", message: "", preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
-                    self.present(alert, animated: true, completion: nil)
-                } else {
-                    for document in (querySnapshot!.documents) {
-                        let useruid = document.documentID
-                        completion(useruid)
-                    }
-                }
-            }
+        let user = (Auth.auth().currentUser?.uid)!
+        db.collection("users").document(user).addSnapshotListener { documentSnapshot, error in
+          guard let document = documentSnapshot else {
+            print("Error fetching document: \(error!)")
+            return
+          }
+          guard let data = document.data()?["name"] else {
+            print("Document data was empty.")
+            return
+          }
+            self.hiText.text = ("Hi, " + (data as? String ?? ""))
+            self.hiText.attributedText = self.addSpecificColorText(fullString: self.hiText.text! as NSString, colorPartOfString: "Hi, ")
+        }
     }
 }

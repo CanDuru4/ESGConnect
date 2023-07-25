@@ -40,7 +40,7 @@ class LogInViewController: UIViewController {
         
         
         //MARK: Image Features
-        let imageLogo = UIImage(named: "ESGLogo")
+        let imageLogo = UIImage(named: "Logo")
         let imageView = UIImageView(image: imageLogo)
         imageView.clipsToBounds = true
         imageView.contentMode = UIView.ContentMode.scaleAspectFit
@@ -50,7 +50,7 @@ class LogInViewController: UIViewController {
         //MARK: Email Field Features
         emailField.placeholder = "Email"
         emailField.borderStyle = .roundedRect
-        emailField.layer.borderColor = CGColor(red: 255/255, green: 191/255, blue: 69/255, alpha: 1)
+        emailField.layer.borderColor = CGColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
         emailField.layer.borderWidth = CGFloat(1)
         emailField.autocorrectionType = .no
         emailField.autocapitalizationType = .none
@@ -60,7 +60,7 @@ class LogInViewController: UIViewController {
         //MARK: Password Field Features
         passwordField.placeholder = "Password"
         passwordField.borderStyle = .roundedRect
-        passwordField.layer.borderColor = CGColor(red: 255/255, green: 191/255, blue: 69/255, alpha: 1)
+        passwordField.layer.borderColor = CGColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
         passwordField.layer.borderWidth = CGFloat(1)
         view.addSubview(passwordField)
         passwordField.isSecureTextEntry = true
@@ -100,7 +100,7 @@ class LogInViewController: UIViewController {
             
             //MARK: Image Constraints
             imageView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
-            imageView.bottomAnchor.constraint(equalTo: emailField.topAnchor, constant: 75),
+            imageView.bottomAnchor.constraint(equalTo: emailField.topAnchor, constant: 40),
             imageView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 50),
             imageView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -50),
             

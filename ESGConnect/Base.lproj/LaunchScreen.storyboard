@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ESGLogo" translatesAutoresizingMaskIntoConstraints="NO" id="anw-5G-qan">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="The Workable Logo - 4.png" translatesAutoresizingMaskIntoConstraints="NO" id="anw-5G-qan">
                                 <rect key="frame" x="33" y="239" width="327" height="224"/>
                                 <color key="backgroundColor" name="AppBlue"/>
                                 <color key="tintColor" red="0.1058823466" green="0.1686274707" blue="0.24313727020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -26,6 +26,14 @@
                                     <constraint firstAttribute="width" constant="327" id="wBq-Ny-Xno"/>
                                 </constraints>
                             </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="by Can Duru" textAlignment="center" minimumFontSize="21" translatesAutoresizingMaskIntoConstraints="NO" id="YhF-wD-wmA">
+                                <rect key="frame" x="133" y="792.66666666666663" width="127" height="25.333333333333371"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="AppBlue"/>
@@ -33,7 +41,10 @@
                         <constraints>
                             <constraint firstItem="anw-5G-qan" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-75" id="CgP-FA-Sez"/>
                             <constraint firstItem="anw-5G-qan" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="J2X-Pd-uUt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YhF-wD-wmA" secondAttribute="bottom" id="PeZ-m9-RjW"/>
+                            <constraint firstItem="YhF-wD-wmA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="133" id="RGN-KX-huP"/>
                             <constraint firstItem="anw-5G-qan" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Yah-n9-gwn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YhF-wD-wmA" secondAttribute="trailing" constant="133" id="qTa-Uu-ON9"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -44,9 +55,9 @@
     </scenes>
     <color key="tintColor" name="AppBlue"/>
     <resources>
-        <image name="ESGLogo" width="394" height="388.66665649414062"/>
+        <image name="The Workable Logo - 4.png" width="1970.25" height="472.5"/>
         <namedColor name="AppBlue">
-            <color red="0.023529411764705882" green="0.32549019607843138" blue="0.44313725490196076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.043137254901960784" green="0.17647058823529413" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
