@@ -88,7 +88,7 @@ class LogInViewController: UIViewController {
         
         //MARK: Reset Password Features
         resetPasswordButton.setTitle("Reset Password", for: .normal)
-        resetPasswordButton.setTitleColor(.black, for: .normal)
+        resetPasswordButton.setTitleColor(.white, for: .normal)
         resetPasswordButton.clipsToBounds = true
         view.addSubview(resetPasswordButton)
         resetPasswordButton.addTarget(self, action: #selector(resetPassword), for: .touchUpInside)
