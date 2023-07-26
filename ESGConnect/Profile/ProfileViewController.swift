@@ -92,7 +92,7 @@ class ProfileViewController: UIViewController {
 //MARK: Color Text Beginning
     func addSpecificColorText(fullString: NSString, colorPartOfString: NSString) -> NSAttributedString {
         let nonColorFontAttribute = [NSAttributedString.Key.foregroundColor: UIColor(named: "AppYellow")]
-        let colorFontAttribute = [NSAttributedString.Key.foregroundColor: UIColor.black]
+        let colorFontAttribute = [NSAttributedString.Key.foregroundColor: UIColor.white]
         let coloredString = NSMutableAttributedString(string: fullString as String, attributes:nonColorFontAttribute as [NSAttributedString.Key : Any])
         coloredString.addAttributes(colorFontAttribute, range: fullString.range(of: colorPartOfString as String))
         return coloredString
@@ -113,7 +113,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: SettingsTableViewCell.identifer, for: indexPath) as! SettingsTableViewCell
         cell.textLabel?.text = items[indexPath.row]
         cell.textLabel?.numberOfLines = -1
-        cell.textLabel?.textColor = .black
+        cell.textLabel?.textColor = .white
         return cell
     }
     
