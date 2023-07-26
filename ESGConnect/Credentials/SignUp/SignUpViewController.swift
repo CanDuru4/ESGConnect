@@ -5,13 +5,15 @@
 //  Created by Can Duru on 13.07.2023.
 //
 
+//MARK: Import
 import UIKit
 import FirebaseFirestore
 import FirebaseAuth
+import FirebaseDatabase
 
 class SignUpViewController: UIViewController {
 
-    //MARK: Set Up
+//MARK: Set Up
         
         
         
@@ -27,14 +29,17 @@ class SignUpViewController: UIViewController {
     var locationField = UITextField()
     var socialField = UITextField()
     var education_employeeField = UITextField()
+    var privacy_policy = UITextView()
     var signUpButton = UIButton()
     var userprofile = ""
+    var websitelink = ""
     
-    
-    //MARK: Load
+//MARK: Load
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(named: "AppBlue")
+        
+        //MARK: Set Labels
         setLabels()
         education_employeeField.isHidden = true
         socialField.isHidden = true
@@ -45,7 +50,7 @@ class SignUpViewController: UIViewController {
         
 
         
-    //MARK: Variables Features
+//MARK: Set Up Layout
     func setLabels(){
         
         
@@ -168,8 +173,33 @@ class SignUpViewController: UIViewController {
         signUpButton.addTarget(self, action: #selector(signUpUser), for: .touchUpInside)
         signUpButton.translatesAutoresizingMaskIntoConstraints = false
             
+        //MARK: Priacy Policy Text View Feature
+        privacy_policy.backgroundColor = .clear
+        privacy_policy.textColor = .white
+        privacy_policy.textAlignment = .center
+        privacy_policy.font = UIFont(name: "Helvetica Neue", size: 12)
+        privacy_policy.text = "By registering to this application, you accept our privacy policy."
+        privacy_policy.isEditable = false
+        websiteData {
+            let attributedString = NSMutableAttributedString(string: "By registering to this application, you accept our privacy policy.")
+            let url = URL(string: self.websitelink)!
+            attributedString.setAttributes([.link: url], range: NSMakeRange(51, 14))
+            self.privacy_policy.attributedText = attributedString
+            self.privacy_policy.isUserInteractionEnabled = true
+            self.privacy_policy.isEditable = false
+            self.privacy_policy.linkTextAttributes = [
+                .foregroundColor: UIColor(named: "AppYellow")!,
+                .underlineStyle: NSUnderlineStyle.single.rawValue
+            ]
+            self.privacy_policy.textColor = .white
+            self.privacy_policy.textAlignment = .center
+            self.privacy_policy.font = UIFont(name: "Helvetica Neue", size: 12)
+        }
+        view.addSubview(privacy_policy)
+        privacy_policy.translatesAutoresizingMaskIntoConstraints = false
             
             
+        
         //MARK: Constraints
         NSLayoutConstraint.activate([
             
@@ -186,7 +216,6 @@ class SignUpViewController: UIViewController {
             nameField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
             nameField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
             nameField.heightAnchor.constraint(equalToConstant: 35),
-
             
             //MARK: Email Field Constraints
             emailField.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
@@ -195,7 +224,6 @@ class SignUpViewController: UIViewController {
             emailField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
             emailField.heightAnchor.constraint(equalToConstant: 35),
 
-            
             //MARK: Password Field Constraints
             passwordField.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
             passwordField.topAnchor.constraint(equalTo: emailField.bottomAnchor, constant: 5),
@@ -203,7 +231,6 @@ class SignUpViewController: UIViewController {
             passwordField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
             passwordField.heightAnchor.constraint(equalToConstant: 35),
 
-            
             //MARK: Password Authenticate Field Constraints
             passwordAuthenticateField.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
             passwordAuthenticateField.topAnchor.constraint(equalTo: passwordField.bottomAnchor, constant: 5),
@@ -258,10 +285,35 @@ class SignUpViewController: UIViewController {
             signUpButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 30),
             signUpButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -30),
             signUpButton.heightAnchor.constraint(equalToConstant: 35),
+            
+            //MARK: Privacy Policty Text View Constraints
+            privacy_policy.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+            privacy_policy.bottomAnchor.constraint(equalTo: signUpButton.topAnchor, constant: -5),
+            privacy_policy.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 30),
+            privacy_policy.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -30),
+            privacy_policy.heightAnchor.constraint(equalToConstant: 35),
         ])
     }
-        
-    //MARK: Employee Button Action
+    
+    
+    
+//MARK: Website Link Data
+    func websiteData(completion: @escaping () -> ()){
+        let ref = Database.database(url: "https://esgconnect-2023-default-rtdb.firebaseio.com/").reference()
+        ref.observeSingleEvent(of: .value) { snapshot in
+            for case let child as DataSnapshot in snapshot.children {
+                guard let dict = child.value as? [String:Any] else {
+                    return
+                }
+                self.websitelink = dict["privacy_policy"] as! String
+                completion()
+            }
+        }
+    }
+      
+    
+    
+//MARK: Employee Button Action
     @objc func employeeButton(){
         if userprofile == "employee"{
             userprofile = ""
@@ -285,7 +337,9 @@ class SignUpViewController: UIViewController {
         }
     }
     
-    //MARK: Company Button Action
+    
+    
+//MARK: Company Button Action
     @objc func companyButton(){
         if userprofile == "company"{
             userprofile = ""
@@ -308,7 +362,9 @@ class SignUpViewController: UIViewController {
         }
     }
     
-    //MARK: Sign Up Button Action
+    
+    
+//MARK: Sign Up Button Action
     @objc func signUpUser(){
         
         
@@ -370,7 +426,7 @@ class SignUpViewController: UIViewController {
         
         
         
-    //MARK: Validate Fields
+//MARK: Validate Fields
     func validateFields() -> String? {
         
         
@@ -409,12 +465,14 @@ class SignUpViewController: UIViewController {
         
         
         
-    //MARK: Password Requirements
+//MARK: Password Requirements
     func isPasswordValid(_ password : String) -> Bool {
         let passwordTest = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[0-9])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,}")
         return passwordTest.evaluate(with: password)
     }
 }
+
+
 
 //MARK: Hide Keyboard
 extension UIViewController {

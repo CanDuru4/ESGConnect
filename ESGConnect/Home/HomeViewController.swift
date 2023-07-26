@@ -5,11 +5,15 @@
 //  Created by Can Duru on 7.07.2023.
 //
 
+
+//MARK: Import
 import UIKit
 import FirebaseAuth
 import FirebaseFirestore
 import FirebaseCore
 import FirebaseDatabase
+
+
 
 //MARK: Employee Array
 struct Info {
@@ -46,7 +50,7 @@ class HomeViewController: UIViewController, UISearchBarDelegate {
     var byLocationButton = UIButton()
 
         
-    //MARK: Company Set Up
+    //MARK: List Set Up
     var filtered:[Info] = []{
         didSet{
             infoTable.reloadData()
@@ -82,15 +86,20 @@ class HomeViewController: UIViewController, UISearchBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(named: "AppBlue")
+        self.navigationItem.title = "The Workable"
+        self.navigationController!.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Helvetica Neue", size: 20)!, NSAttributedString.Key.foregroundColor: UIColor.white]
         
+        //MARK: Table Load
         infoTable.backgroundColor = UIColor(named: "AppBlue")
         infoTable.separatorColor = UIColor(named: "AppYellow")
         view.addSubview(infoTable)
-        self.navigationItem.title = "The Workable"
-        self.navigationController!.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Helvetica Neue", size: 20)!, NSAttributedString.Key.foregroundColor: UIColor.white]
+        
+        //MARK: Searchbar Load
         navigationItem.searchController = searchController
         self.searchController.searchBar.searchTextField.attributedPlaceholder =  NSAttributedString.init(string: "Search a Name", attributes: [NSAttributedString.Key.foregroundColor:UIColor(named: "AppYellow")!])
         searchController.searchBar.searchTextField.textColor = UIColor(named: "AppYellow")
+        
+        //MARK: Data Load
         filtered = []
         listarray = []
         getUserData {
@@ -110,6 +119,8 @@ class HomeViewController: UIViewController, UISearchBarDelegate {
 //MARK: Set Layout
     func setLayout(){
         
+        
+        //MARK: Search by Name Button Features
         byNameButton.setTitle("Search by Name", for: .normal)
         byNameButton.setTitleColor(.white, for: .normal)
         byNameButton.backgroundColor = UIColor(named: "AppYellow")
@@ -121,6 +132,7 @@ class HomeViewController: UIViewController, UISearchBarDelegate {
         byNameButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([byNameButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20), byNameButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 5), byNameButton.widthAnchor.constraint(equalToConstant: 160), byNameButton.heightAnchor.constraint(equalToConstant: 20)])
         
+        //MARK: Search by Location Button Features
         byLocationButton.setTitle("Search by Location", for: .normal)
         byLocationButton.setTitleColor(.white, for: .normal)
         byLocationButton.backgroundColor = UIColor(named: "AppYellow")
@@ -132,6 +144,7 @@ class HomeViewController: UIViewController, UISearchBarDelegate {
         byLocationButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([byLocationButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20), byLocationButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 5), byLocationButton.widthAnchor.constraint(equalToConstant: 160), byLocationButton.heightAnchor.constraint(equalToConstant: 20)])
         
+        //MARK: Tabel Name Label Features
         let tabelLabel = UILabel()
         tabelLabel.textColor = UIColor(named: "AppColor2")
         if userprofile == "company" {
@@ -150,10 +163,14 @@ class HomeViewController: UIViewController, UISearchBarDelegate {
         tabelLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([tabelLabel.topAnchor.constraint(equalTo: byNameButton.bottomAnchor, constant: 5), tabelLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20)])
         
+        //MARK: Tabel Constraints
         infoTable.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([infoTable.topAnchor.constraint(equalTo: tabelLabel.bottomAnchor, constant: 10), infoTable.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor), infoTable.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor), infoTable.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor)])
     }
 
+    
+    
+//MARK: Search by Name Button Action
     @objc func byNameButtonAction(){
         if searchChoice == 0 {
             searchChoice = 1
@@ -170,6 +187,9 @@ class HomeViewController: UIViewController, UISearchBarDelegate {
         }
     }
     
+    
+    
+//MARK: Search by Location Button Action
     @objc func byLocationButtonAction(){
         if searchChoice == 0 {
             searchChoice = 2
@@ -185,6 +205,8 @@ class HomeViewController: UIViewController, UISearchBarDelegate {
             byLocationButton.backgroundColor = UIColor(named: "AppYellow")
         }
     }
+    
+    
     
 //MARK: Search Bar
     func isSearchBarEmpty() -> Bool{
@@ -224,7 +246,10 @@ class HomeViewController: UIViewController, UISearchBarDelegate {
         byNameButton.backgroundColor = UIColor(named: "AppYellow")
         byLocationButton.backgroundColor = UIColor(named: "AppYellow")
     }
+  
     
+    
+//MARK: Table Data Repeat
     var timer = Timer()
     func repeatgetUserData(){
         timer = Timer.scheduledTimer(withTimeInterval: 60, repeats: true, block: { _ in
@@ -240,7 +265,9 @@ class HomeViewController: UIViewController, UISearchBarDelegate {
         })
     }
     
-//MARK: Get User Data
+    
+    
+//MARK: Get Table Data
     func getUserData(completion: @escaping () -> ()){
         let db = Firestore.firestore()
         let docRef = db.collection("users")
@@ -254,7 +281,7 @@ class HomeViewController: UIViewController, UISearchBarDelegate {
                         return
                     }
                     
-                    if (document.data()["uid"] as! String == Auth.auth().currentUser!.uid) {
+                    if (document.data()["uid"] as? String == Auth.auth().currentUser?.uid) {
                         self.userprofile = (dataUser as! String)
                     }
                     
@@ -373,6 +400,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+
+
+//MARK: Extension UILabel
 extension UILabel {
     func underline() {
         guard let tittleText = self.text else { return }

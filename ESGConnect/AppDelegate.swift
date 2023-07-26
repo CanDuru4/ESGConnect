@@ -5,6 +5,7 @@
 //  Created by Can Duru on 7.07.2023.
 //
 
+//MARK: Import
 import UIKit
 import FirebaseCore
 import FirebaseMessaging
@@ -17,10 +18,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+//MARK: App Check
         let providerFactory = MyAppCheckProviderFactory()
         AppCheck.setAppCheckProviderFactory(providerFactory)
-        FirebaseApp.configure()
         
+        
+        
+//MARK: Firebase Configure
+        FirebaseApp.configure()
+    
+        
+        
+//MARK: Notifications Configure
         UNUserNotificationCenter.current().delegate = self
         Messaging.messaging().delegate = self
 
