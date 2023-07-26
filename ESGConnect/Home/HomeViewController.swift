@@ -254,7 +254,7 @@ class HomeViewController: UIViewController, UISearchBarDelegate {
                         return
                     }
                     
-                    if (document.data()["uid"] as! String == Auth.auth().currentUser!.uid) {
+                    if (document.data()["uid"] as? String == Auth.auth().currentUser?.uid) {
                         self.userprofile = (dataUser as! String)
                     }
                     

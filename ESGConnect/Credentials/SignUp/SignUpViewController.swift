@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseFirestore
 import FirebaseAuth
+import FirebaseDatabase
 
 class SignUpViewController: UIViewController {
 
@@ -27,9 +28,10 @@ class SignUpViewController: UIViewController {
     var locationField = UITextField()
     var socialField = UITextField()
     var education_employeeField = UITextField()
+    var privacy_policy = UITextView()
     var signUpButton = UIButton()
     var userprofile = ""
-    
+    var websitelink = ""
     
     //MARK: Load
     override func viewDidLoad() {
@@ -168,6 +170,30 @@ class SignUpViewController: UIViewController {
         signUpButton.addTarget(self, action: #selector(signUpUser), for: .touchUpInside)
         signUpButton.translatesAutoresizingMaskIntoConstraints = false
             
+        //MARK: Priacy Policy Text View Feature
+        privacy_policy.backgroundColor = .clear
+        privacy_policy.textColor = .white
+        privacy_policy.textAlignment = .center
+        privacy_policy.font = UIFont(name: "Helvetica Neue", size: 12)
+        privacy_policy.text = "By registering to this application, you accept our privacy policy."
+        privacy_policy.isEditable = false
+        websiteData {
+            let attributedString = NSMutableAttributedString(string: "By registering to this application, you accept our privacy policy.")
+            let url = URL(string: self.websitelink)!
+            attributedString.setAttributes([.link: url], range: NSMakeRange(51, 14))
+            self.privacy_policy.attributedText = attributedString
+            self.privacy_policy.isUserInteractionEnabled = true
+            self.privacy_policy.isEditable = false
+            self.privacy_policy.linkTextAttributes = [
+                .foregroundColor: UIColor(named: "AppYellow")!,
+                .underlineStyle: NSUnderlineStyle.single.rawValue
+            ]
+            self.privacy_policy.textColor = .white
+            self.privacy_policy.textAlignment = .center
+            self.privacy_policy.font = UIFont(name: "Helvetica Neue", size: 12)
+        }
+        view.addSubview(privacy_policy)
+        privacy_policy.translatesAutoresizingMaskIntoConstraints = false
             
             
         //MARK: Constraints
@@ -258,7 +284,28 @@ class SignUpViewController: UIViewController {
             signUpButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 30),
             signUpButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -30),
             signUpButton.heightAnchor.constraint(equalToConstant: 35),
+            
+            //MARK: Privacy Policty Text View Constraints
+            privacy_policy.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+            privacy_policy.bottomAnchor.constraint(equalTo: signUpButton.topAnchor, constant: -5),
+            privacy_policy.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 30),
+            privacy_policy.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -30),
+            privacy_policy.heightAnchor.constraint(equalToConstant: 35),
         ])
+    }
+    
+    //MARK: Website Data
+    func websiteData(completion: @escaping () -> ()){
+        let ref = Database.database(url: "https://esgconnect-2023-default-rtdb.firebaseio.com/").reference()
+        ref.observeSingleEvent(of: .value) { snapshot in
+            for case let child as DataSnapshot in snapshot.children {
+                guard let dict = child.value as? [String:Any] else {
+                    return
+                }
+                self.websitelink = dict["privacy_policy"] as! String
+                completion()
+            }
+        }
     }
         
     //MARK: Employee Button Action

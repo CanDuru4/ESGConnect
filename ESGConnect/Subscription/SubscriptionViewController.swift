@@ -7,10 +7,12 @@
 
 import UIKit
 import WebKit
-
+import FirebaseDatabase
 
 class SubscriptionViewController: UIViewController {
 
+    var websitelink = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(named: "AppBlue")
@@ -81,34 +83,49 @@ class SubscriptionViewController: UIViewController {
     }
     
     @objc private func openStripeLink() {
-         if let url = URL(string: "https://canduru.net") {
-             let webView = WKWebView(frame: self.view.bounds)
-             webView.load(URLRequest(url: url))
-             webView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-             webView.allowsBackForwardNavigationGestures = false
-             
-             let viewController = UIViewController()
-             viewController.view = webView
+        
+        let webView = WKWebView(frame: self.view.bounds)
+        websiteData {
+            let url = URL(string: self.websitelink)!
+            webView.load(URLRequest(url: url))
+            webView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            webView.allowsBackForwardNavigationGestures = false
+        }
+         
+        let viewController = UIViewController()
+        viewController.view = webView
 
-             //MARK: Back Button Set Up
-             let backButton = UIButton()
-             backButton.setImage(UIImage(systemName: "arrow.backward")?.withTintColor(UIColor(named: "AppYellow")!, renderingMode: .alwaysOriginal), for: .normal)
-             backButton.addTarget(self, action: #selector(self_dismiss), for: .touchUpInside)
-             viewController.view.addSubview(backButton)
-             backButton.contentHorizontalAlignment = .fill
-             backButton.contentVerticalAlignment = .fill
-             backButton.imageView?.contentMode = .scaleAspectFit
+        //MARK: Back Button Set Up
+        let backButton = UIButton()
+        backButton.setImage(UIImage(systemName: "arrow.backward")?.withTintColor(UIColor(named: "AppYellow")!, renderingMode: .alwaysOriginal), for: .normal)
+        backButton.addTarget(self, action: #selector(self_dismiss), for: .touchUpInside)
+        viewController.view.addSubview(backButton)
+        backButton.contentHorizontalAlignment = .fill
+        backButton.contentVerticalAlignment = .fill
+        backButton.imageView?.contentMode = .scaleAspectFit
 
-             backButton.translatesAutoresizingMaskIntoConstraints = false
-             NSLayoutConstraint.activate([backButton.leadingAnchor.constraint(equalTo: viewController.view.safeAreaLayoutGuide.leadingAnchor, constant: 16), backButton.topAnchor.constraint(equalTo: viewController.view.safeAreaLayoutGuide.topAnchor, constant: 13), backButton.widthAnchor.constraint(equalToConstant: 30), backButton.heightAnchor.constraint(equalToConstant: 30)])
-             
-             viewController.title = "Stripe Link"
-             self.present(viewController, animated: true)
-         }
+        backButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([backButton.leadingAnchor.constraint(equalTo: viewController.view.safeAreaLayoutGuide.leadingAnchor, constant: 16), backButton.topAnchor.constraint(equalTo: viewController.view.safeAreaLayoutGuide.topAnchor, constant: 13), backButton.widthAnchor.constraint(equalToConstant: 30), backButton.heightAnchor.constraint(equalToConstant: 30)])
+         
+        viewController.title = "Stripe Link"
+        self.present(viewController, animated: true)
      }
     
     //MARK: Back Button Action
     @objc func self_dismiss(){
         self.dismiss(animated: true)
+    }
+    
+    func websiteData(completion: @escaping () -> ()){
+        let ref = Database.database(url: "https://esgconnect-2023-default-rtdb.firebaseio.com/").reference()
+        ref.observeSingleEvent(of: .value) { snapshot in
+            for case let child as DataSnapshot in snapshot.children {
+                guard let dict = child.value as? [String:Any] else {
+                    return
+                }
+                self.websitelink = dict["payment"] as! String
+                completion()
+            }
+        }
     }
 }
