@@ -21,7 +21,7 @@ class FAQViewController: UIViewController, WKNavigationDelegate {
         view = webView
 
         //MARK: Web URL
-        let url = URL(string: "https://www.canduru.net/contact")!
+        let url = URL(string: "https://theworkable.co")!
         webView.load(URLRequest(url: url))
         webView.allowsBackForwardNavigationGestures = true
     }

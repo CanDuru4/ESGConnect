@@ -147,14 +147,13 @@
 			isa = PBXGroup;
 			children = (
 				1F2119E12A6FCFE1000FEB49 /* Images */,
-				1FEC98BE2A601C2B00C5C83B /* Translation */,
+				1FEC98BE2A601C2B00C5C83B /* Helper */,
 				1FEF69FD2A653E590066CEC3 /* Credentials */,
 				1FEC98B92A601BD300C5C83B /* SignUp */,
 				1FEC98B82A601BC200C5C83B /* LogIn */,
 				1FEC98BD2A601C1700C5C83B /* Home */,
 				1FEC98BB2A601BDF00C5C83B /* Subscription */,
 				1FEC98BA2A601BD900C5C83B /* Profile */,
-				1FC9ABEE2A7059380066733E /* AppCheck.swift */,
 				1F6C07752A57FF7A00B4EAFE /* AppDelegate.swift */,
 				1F6C07772A57FF7A00B4EAFE /* SceneDelegate.swift */,
 				1FEC98B62A601BBA00C5C83B /* TabBarViewController.swift */,
@@ -210,11 +209,12 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		1FEC98BE2A601C2B00C5C83B /* Translation */ = {
+		1FEC98BE2A601C2B00C5C83B /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				1FC9ABEE2A7059380066733E /* AppCheck.swift */,
 			);
-			path = Translation;
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		1FEF69FD2A653E590066CEC3 /* Credentials */ = {
