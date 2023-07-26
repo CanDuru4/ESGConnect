@@ -5,6 +5,7 @@
 //  Created by Can Duru on 13.07.2023.
 //
 
+//MARK: Import
 import UIKit
 import FirebaseFirestore
 import FirebaseAuth
@@ -12,7 +13,7 @@ import FirebaseDatabase
 
 class SignUpViewController: UIViewController {
 
-    //MARK: Set Up
+//MARK: Set Up
         
         
         
@@ -33,10 +34,12 @@ class SignUpViewController: UIViewController {
     var userprofile = ""
     var websitelink = ""
     
-    //MARK: Load
+//MARK: Load
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(named: "AppBlue")
+        
+        //MARK: Set Labels
         setLabels()
         education_employeeField.isHidden = true
         socialField.isHidden = true
@@ -47,7 +50,7 @@ class SignUpViewController: UIViewController {
         
 
         
-    //MARK: Variables Features
+//MARK: Set Up Layout
     func setLabels(){
         
         
@@ -196,6 +199,7 @@ class SignUpViewController: UIViewController {
         privacy_policy.translatesAutoresizingMaskIntoConstraints = false
             
             
+        
         //MARK: Constraints
         NSLayoutConstraint.activate([
             
@@ -212,7 +216,6 @@ class SignUpViewController: UIViewController {
             nameField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
             nameField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
             nameField.heightAnchor.constraint(equalToConstant: 35),
-
             
             //MARK: Email Field Constraints
             emailField.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
@@ -221,7 +224,6 @@ class SignUpViewController: UIViewController {
             emailField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
             emailField.heightAnchor.constraint(equalToConstant: 35),
 
-            
             //MARK: Password Field Constraints
             passwordField.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
             passwordField.topAnchor.constraint(equalTo: emailField.bottomAnchor, constant: 5),
@@ -229,7 +231,6 @@ class SignUpViewController: UIViewController {
             passwordField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
             passwordField.heightAnchor.constraint(equalToConstant: 35),
 
-            
             //MARK: Password Authenticate Field Constraints
             passwordAuthenticateField.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
             passwordAuthenticateField.topAnchor.constraint(equalTo: passwordField.bottomAnchor, constant: 5),
@@ -294,7 +295,9 @@ class SignUpViewController: UIViewController {
         ])
     }
     
-    //MARK: Website Data
+    
+    
+//MARK: Website Link Data
     func websiteData(completion: @escaping () -> ()){
         let ref = Database.database(url: "https://esgconnect-2023-default-rtdb.firebaseio.com/").reference()
         ref.observeSingleEvent(of: .value) { snapshot in
@@ -307,8 +310,10 @@ class SignUpViewController: UIViewController {
             }
         }
     }
-        
-    //MARK: Employee Button Action
+      
+    
+    
+//MARK: Employee Button Action
     @objc func employeeButton(){
         if userprofile == "employee"{
             userprofile = ""
@@ -332,7 +337,9 @@ class SignUpViewController: UIViewController {
         }
     }
     
-    //MARK: Company Button Action
+    
+    
+//MARK: Company Button Action
     @objc func companyButton(){
         if userprofile == "company"{
             userprofile = ""
@@ -355,7 +362,9 @@ class SignUpViewController: UIViewController {
         }
     }
     
-    //MARK: Sign Up Button Action
+    
+    
+//MARK: Sign Up Button Action
     @objc func signUpUser(){
         
         
@@ -417,7 +426,7 @@ class SignUpViewController: UIViewController {
         
         
         
-    //MARK: Validate Fields
+//MARK: Validate Fields
     func validateFields() -> String? {
         
         
@@ -456,12 +465,14 @@ class SignUpViewController: UIViewController {
         
         
         
-    //MARK: Password Requirements
+//MARK: Password Requirements
     func isPasswordValid(_ password : String) -> Bool {
         let passwordTest = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[0-9])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,}")
         return passwordTest.evaluate(with: password)
     }
 }
+
+
 
 //MARK: Hide Keyboard
 extension UIViewController {

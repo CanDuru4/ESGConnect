@@ -5,12 +5,13 @@
 //  Created by Can Duru on 17.07.2023.
 //
 
+//MARK: Import
 import UIKit
 import FirebaseAuth
 
 class CredentialsViewController: UIViewController {
     
-    //MARK: Set Up
+//MARK: Set Up
     
     
     
@@ -19,10 +20,12 @@ class CredentialsViewController: UIViewController {
     var loginButton = UIButton()
     
     
-    //MARK: Load
+//MARK: Load
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(named: "AppBlue")
+        
+        //MARK: Check User Logged In Status
         Auth.auth().addStateDidChangeListener { auth, user in
             if user != nil {
                self.navigationController?.pushViewController(TabBarViewController(), animated: true)
@@ -30,12 +33,14 @@ class CredentialsViewController: UIViewController {
            } else {
            }
         }
+        
+        //MARK: Set Labels
         self.setLabels()
     }
     
     
     
-    //MARK: Variable Features
+//MARK: Set Up Layout
     func setLabels(){
         
         
@@ -96,12 +101,16 @@ class CredentialsViewController: UIViewController {
         ])
     }
     
-    //MARK: Transition to Log In
+    
+    
+//MARK: Transition to Log In
     @objc func transitiontoLogIn(){
         self.navigationController?.pushViewController(LogInViewController(), animated: true)
     }
     
-    //MARK: Transition to Sign Up
+    
+    
+//MARK: Transition to Sign Up
     @objc func transitiontoSignUp(){
         self.navigationController?.pushViewController(SignUpViewController(), animated: true)
     }

@@ -5,12 +5,13 @@
 //  Created by Can Duru on 13.07.2023.
 //
 
+//MARK: Import
 import UIKit
 import FirebaseAuth
 
 class LogInViewController: UIViewController {
     
-    //MARK: Set Up
+//MARK: Set Up
     
     
     
@@ -23,10 +24,12 @@ class LogInViewController: UIViewController {
     
     
     
-    //MARK: Load
+//MARK: Load
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(named: "AppBlue")
+        
+        //MARK: Set Labels
         setLabels()
         
         //MARK: Hide Keyboard
@@ -35,7 +38,7 @@ class LogInViewController: UIViewController {
     
     
     
-    //MARK: Variable Features
+//MARK: Set Up Layout
     func setLabels(){
         
         
@@ -94,6 +97,8 @@ class LogInViewController: UIViewController {
         resetPasswordButton.addTarget(self, action: #selector(resetPassword), for: .touchUpInside)
         resetPasswordButton.translatesAutoresizingMaskIntoConstraints = false
         
+        
+        
         //MARK: Varibles Constraints
         NSLayoutConstraint.activate([
             
@@ -144,13 +149,12 @@ class LogInViewController: UIViewController {
     
     
     
-    //MARK: Log In Button Action
+//MARK: Log In Button Action
     @objc func logIn(){
         
         
         //MARK: Validate All Fields Filled
         let error = validateFields()
-        
         
         //MARK: Not Filled
         if error != nil {
@@ -158,7 +162,7 @@ class LogInViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             
-            //MARK: Filled
+        //MARK: Filled
         } else {
             let email = emailField.text?.lowercased()
             let password = passwordField.text
@@ -180,7 +184,7 @@ class LogInViewController: UIViewController {
     
     
     
-    //MARK: Rest Password Button Action
+//MARK: Reset Password Button Action
     @objc func resetPassword(){
         let email = passwordField.text
         if email != nil {
@@ -202,14 +206,14 @@ class LogInViewController: UIViewController {
     
     
     
-    //MARK: Transition to Sign Up
+//MARK: Transition to Sign Up
     @objc func transitiontoSignUp(){
         self.navigationController?.pushViewController(SignUpViewController(), animated: true)
     }
     
     
     
-    //MARK: Validate All Fields
+//MARK: Validate All Fields
     func validateFields() -> String? {
         if emailField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             passwordField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
